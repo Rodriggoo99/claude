@@ -1,0 +1,12 @@
+[
+ {"id":"hook",             "take":"T3 de 3", "in":8.47,   "out":10.86,  "text":"Dizer não a clientes fez-me ganhar mais dinheiro."},
+ {"id":"no_inicio",        "take":"T1 de 2", "in":84.49,  "out":87.72,  "text":"No início, aceitava quase tudo e eu sujeitava-me a isso."},
+ {"id":"qualquer_projeto", "take":"T1 de 3", "in":94.00,  "out":96.22,  "text":"Qualquer projeto a qualquer preço."},
+ {"id":"trabalhava",       "take":"T2 de 4", "in":109.97, "out":112.10, "text":"Trabalhava mais e ganhava menos."},
+ {"id":"verdade",          "take":"T2 de 2", "in":130.48, "out":134.22, "text":"E a verdade é que eu comecei a perceber que não me sobrava tempo para os clientes bons."},
+ {"id":"chega",            "take":"T1 de 3", "in":141.55, "out":143.73, "text":"Até o dia em que eu disse chega."},
+ {"id":"hoje",             "take":"T2 de 2", "in":163.51, "out":169.43, "text":"Hoje eu digo mais vezes não do que sim. E sinceramente, acho que foi a melhor decisão da minha vida."},
+ {"id":"frase",            "take":"T3 de 3", "in":182.82, "out":185.26, "text":"Houve uma frase que eu li num livro que era a seguinte:"},
+ {"id":"cada_sim",         "take":"T1 de 2", "in":187.53, "out":190.69, "text":"Cada sim a algo mau é um não a algo melhor."},
+ {"id":"guarda",           "take":"T4 de 4", "in":228.43, "out":232.66, "text":"Guarda isto para a próxima vez em que estiveres na dúvida entre aceitar ou não um projeto."}
+]

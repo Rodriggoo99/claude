@@ -1,0 +1,252 @@
+[
+ {
+  "start": 0.0,
+  "end": 2.16,
+  "hook": true,
+  "lines": [
+   {
+    "t": -1,
+    "text": "dizer *não* a clientes"
+   },
+   {
+    "t": 1.0,
+    "text": "fez-me ganhar",
+    "small": true
+   },
+   {
+    "t": 1.4,
+    "text": "#mais dinheiro",
+    "pulse": 1.44,
+    "size": 100
+   }
+  ]
+ },
+ {
+  "start": 2.16,
+  "end": 3.72,
+  "lines": [
+   {
+    "t": 2.16,
+    "text": "no início eu aceitava"
+   },
+   {
+    "t": 3.22,
+    "text": "*quase* *tudo*"
+   }
+  ]
+ },
+ {
+  "start": 3.72,
+  "end": 5.0,
+  "lines": [
+   {
+    "t": 3.72,
+    "text": "e eu sujeitava-me"
+   },
+   {
+    "t": 4.56,
+    "text": "a isso"
+   }
+  ]
+ },
+ {
+  "start": 5.0,
+  "end": 7.1,
+  "lines": [
+   {
+    "t": 5.02,
+    "text": "qualquer projeto"
+   },
+   {
+    "t": 6.06,
+    "text": "a qualquer *preço*"
+   }
+  ]
+ },
+ {
+  "start": 7.1,
+  "end": 9.0,
+  "lines": [
+   {
+    "t": 7.14,
+    "text": "trabalhava *mais*"
+   },
+   {
+    "t": 7.88,
+    "text": "e ganhava *menos*"
+   }
+  ]
+ },
+ {
+  "start": 9.0,
+  "end": 10.24,
+  "lines": [
+   {
+    "t": 9.02,
+    "text": "e a verdade é que"
+   },
+   {
+    "t": 9.68,
+    "text": "eu comecei a perceber"
+   }
+  ]
+ },
+ {
+  "start": 10.24,
+  "end": 11.24,
+  "lines": [
+   {
+    "t": 10.26,
+    "text": "que não me sobrava"
+   },
+   {
+    "t": 11.04,
+    "text": "*tempo*"
+   }
+  ]
+ },
+ {
+  "start": 11.24,
+  "end": 12.36,
+  "lines": [
+   {
+    "t": 11.26,
+    "text": "para os clientes *bons*"
+   }
+  ]
+ },
+ {
+  "start": 12.36,
+  "end": 13.72,
+  "lines": [
+   {
+    "t": 12.38,
+    "text": "até o dia em que"
+   },
+   {
+    "t": 13.12,
+    "text": "eu disse"
+   }
+  ]
+ },
+ {
+  "start": 13.72,
+  "end": 14.3,
+  "lines": [
+   {
+    "t": 13.72,
+    "text": "#chega.",
+    "pulse": 13.74
+   }
+  ]
+ },
+ {
+  "start": 14.3,
+  "end": 16.68,
+  "lines": [
+   {
+    "t": 14.32,
+    "text": "hoje eu digo mais"
+   },
+   {
+    "t": 15.22,
+    "text": "vezes *não* do que *sim*"
+   }
+  ]
+ },
+ {
+  "start": 16.68,
+  "end": 18.08,
+  "lines": [
+   {
+    "t": 16.7,
+    "text": "e sinceramente"
+   },
+   {
+    "t": 17.54,
+    "text": "acho que foi"
+   }
+  ]
+ },
+ {
+  "start": 18.08,
+  "end": 19.56,
+  "lines": [
+   {
+    "t": 18.1,
+    "text": "a melhor *decisão*"
+   },
+   {
+    "t": 18.96,
+    "text": "da minha vida"
+   }
+  ]
+ },
+ {
+  "start": 19.56,
+  "end": 20.88,
+  "lines": [
+   {
+    "t": 19.58,
+    "text": "houve uma frase"
+   },
+   {
+    "t": 20.12,
+    "text": "que eu li num *livro*"
+   }
+  ]
+ },
+ {
+  "start": 20.88,
+  "end": 21.62,
+  "lines": [
+   {
+    "t": 20.9,
+    "text": "que era a seguinte"
+   }
+  ]
+ },
+ {
+  "start": 24.48,
+  "end": 25.7,
+  "lines": [
+   {
+    "t": 24.5,
+    "text": "guarda *isto*",
+    "bookmark": 24.86
+   },
+   {
+    "t": 25.0,
+    "text": "para a próxima vez"
+   }
+  ]
+ },
+ {
+  "start": 25.7,
+  "end": 26.66,
+  "lines": [
+   {
+    "t": 25.72,
+    "text": "em que estiveres"
+   },
+   {
+    "t": 26.28,
+    "text": "na *dúvida*"
+   }
+  ]
+ },
+ {
+  "start": 26.66,
+  "end": 29.0,
+  "lines": [
+   {
+    "t": 26.68,
+    "text": "entre aceitar"
+   },
+   {
+    "t": 27.3,
+    "text": "ou não um *projeto*"
+   }
+  ]
+ }
+]
