@@ -1,0 +1,1660 @@
+[
+ {
+  "start": 0.0,
+  "lines": [
+   [
+    {
+     "w": "oferecemos",
+     "t": -1.0,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "mais",
+     "t": 0.34,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 0.58,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "um",
+     "t": 0.72,
+     "a": true,
+     "h": false
+    },
+    {
+     "w": "mês",
+     "t": 0.84,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 1.0
+ },
+ {
+  "start": 1.0,
+  "lines": [
+   [
+    {
+     "w": "de",
+     "t": 1.0,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "estratégia",
+     "t": 1.08,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 1.64,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "marca",
+     "t": 1.68,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "pessoal",
+     "t": 1.86,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 2.16
+ },
+ {
+  "start": 2.16,
+  "lines": [
+   [
+    {
+     "w": "a",
+     "t": 2.16,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "um",
+     "t": 2.36,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "cliente",
+     "t": 2.44,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 2.98
+ },
+ {
+  "start": 2.98,
+  "lines": [
+   [
+    {
+     "w": "e",
+     "t": 2.98,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "ganhamos",
+     "t": 3.04,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "0€",
+     "t": 3.42,
+     "a": false,
+     "h": true
+    }
+   ],
+   [
+    {
+     "w": "com",
+     "t": 3.92,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "isso",
+     "t": 4.16,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 4.6
+ },
+ {
+  "start": 4.6,
+  "lines": [
+   [
+    {
+     "w": "um",
+     "t": 4.6,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "cliente",
+     "t": 4.7,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "chegou",
+     "t": 5.14,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "à",
+     "t": 5.5,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "nossa",
+     "t": 5.64,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "agência",
+     "t": 5.8,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 6.34
+ },
+ {
+  "start": 6.34,
+  "lines": [
+   [
+    {
+     "w": "à",
+     "t": 6.34,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "procura",
+     "t": 6.56,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 7.0,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "uma",
+     "t": 7.08,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "direção",
+     "t": 7.18,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 7.68
+ },
+ {
+  "start": 7.68,
+  "lines": [
+   [
+    {
+     "w": "e",
+     "t": 7.68,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 7.86,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "um",
+     "t": 7.9,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "novo",
+     "t": 7.98,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "rumo",
+     "t": 8.18,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 8.42
+ },
+ {
+  "start": 8.42,
+  "lines": [
+   [
+    {
+     "w": "para",
+     "t": 8.42,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "as",
+     "t": 8.54,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "suas",
+     "t": 8.62,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "redes",
+     "t": 8.78,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "sociais",
+     "t": 9.0,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 9.66
+ },
+ {
+  "start": 9.66,
+  "lines": [
+   [
+    {
+     "w": "visto",
+     "t": 9.66,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "que",
+     "t": 9.98,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "estavam",
+     "t": 10.12,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "estagnados",
+     "t": 10.32,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 10.94
+ },
+ {
+  "start": 10.94,
+  "lines": [
+   [
+    {
+     "w": "e",
+     "t": 10.94,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "queriam",
+     "t": 11.1,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "dar",
+     "t": 11.32,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "o",
+     "t": 11.5,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "próximo",
+     "t": 11.64,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "passo",
+     "t": 11.94,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 12.24
+ },
+ {
+  "start": 12.24,
+  "lines": [
+   [
+    {
+     "w": "em",
+     "t": 12.24,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "termos",
+     "t": 12.46,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 12.74,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "marca",
+     "t": 12.82,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "pessoal",
+     "t": 13.02,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 13.6
+ },
+ {
+  "start": 13.6,
+  "lines": [
+   [
+    {
+     "w": "foi",
+     "t": 13.6,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "mais",
+     "t": 13.68,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 13.86,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "um",
+     "t": 14.02,
+     "a": true,
+     "h": false
+    },
+    {
+     "w": "mês",
+     "t": 14.14,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 14.52
+ },
+ {
+  "start": 14.52,
+  "lines": [
+   [
+    {
+     "w": "reunião",
+     "t": 14.52,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "atrás",
+     "t": 14.82,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "de",
+     "t": 15.08,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "reunião",
+     "t": 15.28,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 15.68
+ },
+ {
+  "start": 15.68,
+  "lines": [
+   [
+    {
+     "w": "à",
+     "t": 15.68,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "procura",
+     "t": 15.8,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 16.28,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "vermos",
+     "t": 16.36,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 16.66
+ },
+ {
+  "start": 16.66,
+  "lines": [
+   [
+    {
+     "w": "como",
+     "t": 16.66,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "é",
+     "t": 16.82,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "que",
+     "t": 16.96,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "seria",
+     "t": 16.98,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "possível",
+     "t": 17.14,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 17.58
+ },
+ {
+  "start": 17.58,
+  "lines": [
+   [
+    {
+     "w": "concretizarmos",
+     "t": 17.58,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "este",
+     "t": 18.44,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "projeto",
+     "t": 18.66,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 19.3
+ },
+ {
+  "start": 19.3,
+  "lines": [
+   [
+    {
+     "w": "durante",
+     "t": 19.3,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "estas",
+     "t": 19.58,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "reuniões",
+     "t": 19.74,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 20.26
+ },
+ {
+  "start": 20.26,
+  "lines": [
+   [
+    {
+     "w": "fomos",
+     "t": 20.26,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "dando",
+     "t": 20.48,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "algumas",
+     "t": 20.68,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "ideias",
+     "t": 21.0,
+     "a": true,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 21.44,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "conteúdo",
+     "t": 21.54,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 22.1
+ },
+ {
+  "start": 22.1,
+  "lines": [
+   [
+    {
+     "w": "alguns",
+     "t": 22.1,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "truques",
+     "t": 22.32,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "de",
+     "t": 22.7,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "redes",
+     "t": 22.86,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "sociais",
+     "t": 23.0,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 23.4
+ },
+ {
+  "start": 23.4,
+  "lines": [
+   [
+    {
+     "w": "e",
+     "t": 23.4,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "algumas",
+     "t": 23.72,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "formas",
+     "t": 23.92,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 24.38,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "como",
+     "t": 24.5,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "é",
+     "t": 24.62,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "que",
+     "t": 24.74,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "iríamos",
+     "t": 24.78,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 25.08
+ },
+ {
+  "start": 25.08,
+  "lines": [
+   [
+    {
+     "w": "alavancar",
+     "t": 25.08,
+     "a": true,
+     "h": false
+    },
+    {
+     "w": "o",
+     "t": 25.6,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "conteúdo",
+     "t": 25.68,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "deste",
+     "t": 25.98,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "cliente",
+     "t": 26.24,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 26.74
+ },
+ {
+  "start": 26.74,
+  "lines": [
+   [
+    {
+     "w": "daqui",
+     "t": 26.74,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "em",
+     "t": 26.92,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "diante",
+     "t": 27.1,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 27.42
+ },
+ {
+  "start": 27.42,
+  "lines": [
+   [
+    {
+     "w": "mas",
+     "t": 27.42,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "o",
+     "t": 27.76,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "problema",
+     "t": 27.88,
+     "a": true,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "foi",
+     "t": 28.22,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "que",
+     "t": 28.46,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "demos",
+     "t": 28.58,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 28.78
+ },
+ {
+  "start": 28.78,
+  "lines": [
+   [
+    {
+     "w": "demasiado",
+     "t": 28.78,
+     "a": true,
+     "h": false
+    },
+    {
+     "w": "antes",
+     "t": 29.22,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "do",
+     "t": 29.72,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "contrato",
+     "t": 29.86,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "assinado",
+     "t": 30.24,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 30.74
+ },
+ {
+  "start": 30.74,
+  "lines": [
+   [
+    {
+     "w": "este",
+     "t": 30.74,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "negócio",
+     "t": 30.86,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "acabou",
+     "t": 31.18,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "por",
+     "t": 31.5,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 31.76
+ },
+ {
+  "start": 31.76,
+  "lines": [
+   [
+    {
+     "w": "não",
+     "t": 31.76,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "se",
+     "t": 31.88,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "concretizar",
+     "t": 32.02,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 32.58
+ },
+ {
+  "start": 32.58,
+  "lines": [
+   [
+    {
+     "w": "e",
+     "t": 32.58,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "no",
+     "t": 32.88,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "mesmo",
+     "t": 33.04,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "dia",
+     "t": 33.42,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 33.72
+ },
+ {
+  "start": 33.72,
+  "lines": [
+   [
+    {
+     "w": "que",
+     "t": 33.72,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "disseram",
+     "t": 33.96,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "que",
+     "t": 34.42,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "não",
+     "t": 34.56,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 34.88
+ },
+ {
+  "start": 34.88,
+  "lines": [
+   [
+    {
+     "w": "estavam",
+     "t": 34.88,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "a",
+     "t": 35.26,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "lançar",
+     "t": 35.48,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 35.86
+ },
+ {
+  "start": 35.86,
+  "lines": [
+   [
+    {
+     "w": "uma",
+     "t": 35.86,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "das",
+     "t": 36.14,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "ideias",
+     "t": 36.34,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 36.84
+ },
+ {
+  "start": 36.84,
+  "lines": [
+   [
+    {
+     "w": "que",
+     "t": 36.84,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "nós",
+     "t": 37.04,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "demos",
+     "t": 37.18,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "durante",
+     "t": 37.4,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "as",
+     "t": 37.74,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "reuniões",
+     "t": 37.92,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 38.52
+ },
+ {
+  "start": 38.52,
+  "lines": [
+   [
+    {
+     "w": "mas",
+     "t": 38.52,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "é",
+     "t": 38.64,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "a",
+     "t": 38.71,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "tal",
+     "t": 38.78,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "coisa",
+     "t": 38.94,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 39.48
+ },
+ {
+  "start": 39.48,
+  "lines": [
+   [
+    {
+     "w": "a",
+     "t": 39.48,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "visão",
+     "t": 39.58,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "nem",
+     "t": 39.86,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "sempre",
+     "t": 40.04,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "chega",
+     "t": 40.26,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 40.82
+ },
+ {
+  "start": 40.82,
+  "lines": [
+   [
+    {
+     "w": "é",
+     "t": 40.82,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "preciso",
+     "t": 40.98,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "saber",
+     "t": 41.18,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "como",
+     "t": 41.48,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "executar",
+     "t": 41.88,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 42.58
+ },
+ {
+  "start": 42.58,
+  "lines": [
+   [
+    {
+     "w": "desde",
+     "t": 42.58,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "esta",
+     "t": 42.84,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "má",
+     "t": 43.08,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "experiência",
+     "t": 43.3,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 43.7
+ },
+ {
+  "start": 43.7,
+  "lines": [
+   [
+    {
+     "w": "a",
+     "t": 43.7,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "nossa",
+     "t": 43.96,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "agência",
+     "t": 44.1,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "tem",
+     "t": 44.5,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "uma",
+     "t": 44.66,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "regra",
+     "t": 44.78,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 45.28
+ },
+ {
+  "start": 48.82,
+  "lines": [
+   [
+    {
+     "w": "e",
+     "t": 48.82,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "se",
+     "t": 48.9,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "a",
+     "t": 48.98,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "tua",
+     "t": 49.12,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "empresa",
+     "t": 49.2,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "ou",
+     "t": 49.48,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "a",
+     "t": 49.72,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "tua",
+     "t": 49.76,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "marca",
+     "t": 49.9,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "pessoal",
+     "t": 50.14,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 50.46
+ },
+ {
+  "start": 50.46,
+  "lines": [
+   [
+    {
+     "w": "está",
+     "t": 50.46,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "sem",
+     "t": 50.74,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "rumo",
+     "t": 50.94,
+     "a": true,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "ou",
+     "t": 51.26,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "direção",
+     "t": 51.3,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 51.88
+ },
+ {
+  "start": 51.88,
+  "lines": [
+   [
+    {
+     "w": "comenta",
+     "t": 51.88,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "reunião",
+     "t": 52.36,
+     "a": false,
+     "h": true
+    }
+   ]
+  ],
+  "end": 53.16
+ },
+ {
+  "start": 53.16,
+  "lines": [
+   [
+    {
+     "w": "marcamos",
+     "t": 53.16,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "uma",
+     "t": 53.52,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "reunião",
+     "t": 53.72,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "de",
+     "t": 54.08,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "diagnóstico",
+     "t": 54.16,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 54.7
+ },
+ {
+  "start": 54.7,
+  "lines": [
+   [
+    {
+     "w": "completamente",
+     "t": 54.7,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "gratuita",
+     "t": 55.02,
+     "a": true,
+     "h": false
+    }
+   ]
+  ],
+  "end": 55.94
+ },
+ {
+  "start": 55.94,
+  "lines": [
+   [
+    {
+     "w": "e",
+     "t": 55.94,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "sais",
+     "t": 56.06,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": 56.34,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "lá",
+     "t": 56.46,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "a",
+     "t": 56.52,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "saber",
+     "t": 56.6,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 56.84
+ },
+ {
+  "start": 56.84,
+  "lines": [
+   [
+    {
+     "w": "o",
+     "t": 56.84,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "que",
+     "t": 57.02,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "é",
+     "t": 57.08,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "que",
+     "t": 57.18,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "está",
+     "t": 57.26,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "mal",
+     "t": 57.44,
+     "a": false,
+     "h": false
+    }
+   ],
+   [
+    {
+     "w": "com",
+     "t": 57.52,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "a",
+     "t": 57.7,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "tua",
+     "t": 57.76,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "empresa",
+     "t": 57.86,
+     "a": false,
+     "h": false
+    }
+   ]
+  ],
+  "end": 59.0
+ }
+]
