@@ -6,7 +6,7 @@ const path = require('path');
 async function worker(browser, caps, frames, outdir) {
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 2 });
   await page.goto('file://' + path.resolve(__dirname, 'overlay.html'));
-  await page.evaluate((c) => window.setup(c), caps);
+  await page.evaluate(([c, o]) => window.setup(c, o), [caps, { caps: process.env.CAPS === '1' }]);
   await page.evaluate(() => document.fonts.ready);
   for (const [name, t] of frames) {
     await page.evaluate((t) => window.render(t), t);
@@ -27,7 +27,8 @@ async function worker(browser, caps, frames, outdir) {
     const fps = parseFloat(mode), dur = parseFloat(a);
     workers = parseInt(b || '3');
     const n = Math.ceil(dur * fps);
-    for (let i = 0; i < n; i++) frames.push([`f_${String(i).padStart(5, '0')}.png`, i / fps]);
+    const lo = parseInt(process.env.FROM || '0'), hi = parseInt(process.env.TO || '1e9');
+    for (let i = 0; i < n; i++) if (i >= lo && i <= hi) frames.push([`f_${String(i).padStart(5, '0')}.png`, i / fps]);
   }
   const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
   const parts = Array.from({ length: workers }, (_, w) => frames.filter((_, i) => i % workers === w));

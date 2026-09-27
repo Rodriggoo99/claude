@@ -1,123 +1,13 @@
 [
  {
-  "start": 0.0,
+  "start": -1,
+  "end": 4.6,
+  "hook": true,
   "lines": [
    [
     {
-     "w": "oferecemos",
-     "t": -1.0,
-     "a": false,
-     "h": false
-    }
-   ],
-   [
-    {
-     "w": "mais",
-     "t": 0.34,
-     "a": false,
-     "h": false
-    },
-    {
-     "w": "de",
-     "t": 0.58,
-     "a": false,
-     "h": false
-    },
-    {
-     "w": "um",
-     "t": 0.72,
-     "a": true,
-     "h": false
-    },
-    {
-     "w": "mês",
-     "t": 0.84,
-     "a": true,
-     "h": false
-    }
-   ]
-  ],
-  "end": 1.0
- },
- {
-  "start": 1.0,
-  "lines": [
-   [
-    {
-     "w": "de",
-     "t": 1.0,
-     "a": false,
-     "h": false
-    },
-    {
-     "w": "estratégia",
-     "t": 1.08,
-     "a": false,
-     "h": false
-    },
-    {
-     "w": "de",
-     "t": 1.64,
-     "a": false,
-     "h": false
-    }
-   ],
-   [
-    {
-     "w": "marca",
-     "t": 1.68,
-     "a": false,
-     "h": false
-    },
-    {
-     "w": "pessoal",
-     "t": 1.86,
-     "a": false,
-     "h": false
-    }
-   ]
-  ],
-  "end": 2.16
- },
- {
-  "start": 2.16,
-  "lines": [
-   [
-    {
-     "w": "a",
-     "t": 2.16,
-     "a": false,
-     "h": false
-    },
-    {
-     "w": "um",
-     "t": 2.36,
-     "a": false,
-     "h": false
-    },
-    {
-     "w": "cliente",
-     "t": 2.44,
-     "a": false,
-     "h": false
-    }
-   ]
-  ],
-  "end": 2.98
- },
- {
-  "start": 2.98,
-  "lines": [
-   [
-    {
-     "w": "e",
-     "t": 2.98,
-     "a": false,
-     "h": false
-    },
-    {
-     "w": "ganhamos",
-     "t": 3.04,
+     "w": "ganhámos",
+     "t": -1,
      "a": false,
      "h": false
     }
@@ -125,27 +15,45 @@
    [
     {
      "w": "0€",
-     "t": 3.42,
+     "t": -1,
      "a": false,
-     "h": true
+     "h": true,
+     "pulse": 3.42
     }
    ],
    [
     {
      "w": "com",
-     "t": 3.92,
+     "t": -1,
      "a": false,
      "h": false
     },
     {
-     "w": "isso",
-     "t": 4.16,
+     "w": "um",
+     "t": -1,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "mês",
+     "t": -1,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "de",
+     "t": -1,
+     "a": false,
+     "h": false
+    },
+    {
+     "w": "trabalho",
+     "t": -1,
      "a": false,
      "h": false
     }
    ]
-  ],
-  "end": 4.6
+  ]
  },
  {
   "start": 4.6,

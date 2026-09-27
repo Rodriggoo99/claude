@@ -2,8 +2,9 @@ import numpy as np, cv2, subprocess, sys, os
 
 W, H, FPS = 2160, 3840, 60
 AX, AY = 0.528 * W, 0.443 * H  # face centre: zooms stay anchored on the face
-GRADE = ("eq=contrast=1.06:brightness=0.012:saturation=1.10:gamma=0.98,"
-         "colorbalance=rs=0.015:bs=-0.02:rm=0.012:bm=-0.015")
+GRADE = ("hqdn3d=0:1.2:4:3,"  # light temporal denoise: calms sensor noise shimmer on the flat wall
+         "eq=contrast=1.03:brightness=0.008:saturation=1.06,"
+         "colorbalance=rs=0.01:bs=-0.012:rm=0.008:bm=-0.01")
 FF = "ffmpeg"
 
 def eio(x):
@@ -80,13 +81,14 @@ if __name__ == "__main__" and sys.argv[1] == "full":
     enc = subprocess.Popen([FF, "-v", "error", "-y",
         "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
         "-vf", "scale=out_color_matrix=bt709:out_range=tv:in_range=pc:flags=accurate_rnd+full_chroma_int,format=yuv420p",
-        "-c:v", "libx264", "-preset", "medium", "-crf", "15", "-maxrate", "60M", "-bufsize", "120M",
+        "-c:v", "libx264", "-preset", "slow", "-crf", "14", "-tune", "film", "-x264-params", "aq-mode=3:aq-strength=0.8",
+        "-maxrate", "80M", "-bufsize", "160M",
         "-profile:v", "high", "-level", "5.2", "-g", "120",
         "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-color_range", "tv",
         out], stdin=subprocess.PIPE)
     for i, f in enumerate(read_frames("raw.mp4")):
         t = i / FPS
-        ov = overlay(os.path.join(ovdir, f"f_{int(t * 30 + 1e-6):05d}.png"))
+        ov = overlay(os.path.join(ovdir, f"f_{i:05d}.png"))
         f = composite(warp(f, zoom(t)), ov)
         enc.stdin.write(f.tobytes())
         if i % 300 == 0:

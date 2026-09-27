@@ -12,20 +12,27 @@ html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hi
 *{box-sizing:border-box}
 #cap{position:absolute;left:60px;right:60px;top:0;height:1920px;pointer-events:none}
 .chunk{position:absolute;left:0;right:0;top:470px;transform:translateY(-50%);text-align:center;
-  font-family:Inter;font-weight:700;font-size:74px;line-height:1.08;letter-spacing:-.025em;color:var(--ink);
+  font-family:Inter;font-weight:700;font-size:56px;line-height:1.12;letter-spacing:-.022em;color:var(--ink);
   text-shadow:0 2px 18px rgba(0,0,0,.30),0 1px 3px rgba(0,0,0,.28)}
 .line{display:block;white-space:nowrap}
 .w{display:inline-block;will-change:transform}
 .acc{font-family:Serif;font-style:italic;font-weight:400;font-size:1.28em;letter-spacing:-.01em;color:var(--cream);line-height:.9}
-.hero{font-family:Serif;font-style:italic;font-weight:400;font-size:230px;line-height:.95;letter-spacing:-.02em;color:var(--cream)}
-.small{font-size:54px;font-weight:600;letter-spacing:.0em}
+.hero{font-family:Serif;font-style:italic;font-weight:400;font-size:190px;line-height:.95;letter-spacing:-.02em;color:var(--cream)}
+.small{font-size:46px;font-weight:600;letter-spacing:-.01em}
+body.caps .chunk{text-transform:uppercase;font-weight:800;font-size:46px;letter-spacing:.012em;line-height:1.2}
+body.caps .acc{font-size:1.22em;letter-spacing:.02em;line-height:.9}
+body.caps .small{font-size:38px;font-weight:700;letter-spacing:.05em}
+body.caps .hero{letter-spacing:0}
+body.caps .capsable{text-transform:uppercase;letter-spacing:.01em}
+body.caps #g3t{font-size:66px}
+body.caps .box{font-size:44px}
 /* graphics */
 .g{position:absolute;inset:0;opacity:0}
 .bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--navy0) 0%,#0E1522 30%,var(--navy1) 52%,#0D1320 72%,var(--navy0) 100%)}
 .kicker{font-family:Inter;font-weight:600;font-size:25px;letter-spacing:.42em;color:rgba(255,255,255,.5);text-transform:uppercase}
 .card{position:absolute;left:130px;width:820px;height:108px;border:2px solid rgba(255,255,255,.22);border-radius:22px;
   background:rgba(255,255,255,.035);display:flex;align-items:center;padding:0 34px;gap:26px}
-.card .t{font-family:Inter;font-weight:600;font-size:42px;color:#fff;letter-spacing:-.01em;flex:1}
+.card .t{font-family:Inter;font-weight:600;font-size:40px;color:#fff;letter-spacing:-.01em;flex:1}
 .card .s{font-family:Inter;font-weight:600;font-size:24px;letter-spacing:.32em;color:rgba(255,255,255,.55)}
 .ico{width:44px;height:44px;flex:none}
 .bar{position:absolute;left:130px;width:820px;height:8px;border-radius:8px;background:rgba(255,255,255,.12);overflow:hidden}
@@ -44,10 +51,10 @@ html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hi
 </style></head>
 <body>
 <div id="g1" class="g"><div class="bg"></div>
-  <div class="kicker" style="position:absolute;top:640px;width:100%;text-align:center" id="g1k">mais de 1 mês</div>
+  <div class="kicker" style="position:absolute;top:590px;width:100%;text-align:center" id="g1k">mais de 1 mês</div>
   <div id="g1cards"></div>
-  <div class="bar" id="g1bar" style="top:1392px"><i></i></div>
-  <div class="lbl" id="g1bl" style="top:1428px;width:100%;left:0;text-align:center">PROJETO</div>
+  <div class="bar" id="g1bar" style="top:1300px"><i></i></div>
+  <div class="lbl" id="g1bl" style="top:1334px;width:100%;left:0;text-align:center">PROJETO</div>
 </div>
 <div id="g2" class="g"><div class="bg"></div>
   <div id="g2h" style="position:absolute;left:130px;top:640px;display:flex;align-items:center;gap:30px">
@@ -57,10 +64,10 @@ html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hi
   <div class="vline" id="g2line" style="left:163px;top:800px;height:0"></div>
   <div class="node" id="g2n1" style="left:150px;top:955px"></div>
   <div class="lbl" id="g2l1" style="left:228px;top:878px">A RESPOSTA</div>
-  <div class="pill" id="g2p" style="left:228px;top:925px">não.</div>
+  <div class="pill capsable" id="g2p" style="left:228px;top:925px">não.</div>
   <div class="node" id="g2n2" style="left:150px;top:1205px"></div>
   <div class="lbl" id="g2l2" style="left:228px;top:1128px">ESTAVAM A LANÇAR</div>
-  <div class="box" id="g2b" style="left:228px;top:1172px"><span id="g2b1">uma das </span><span id="g2b2" class="acc">ideias</span></div>
+  <div class="box capsable" id="g2b" style="left:228px;top:1172px"><span id="g2b1">uma das </span><span id="g2b2" class="acc">ideias</span></div>
   <div class="tag" id="g2tag" style="left:640px;top:1290px">NOSSAS</div>
 </div>
 <div id="g3" class="g"><div class="bg"></div>
@@ -70,7 +77,7 @@ html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hi
     <path d="M32 44h86M32 70h86M32 96h86" stroke-opacity=".45"/>
     <path id="g3sig" d="M30 150 C40 118,55 118,62 140 S82 165,92 140 S112 118,122 136"/>
   </svg>
-  <div id="g3t" style="position:absolute;top:770px;width:100%;text-align:center;font-family:Inter;font-weight:800;font-size:86px;color:#fff;letter-spacing:-.03em">
+  <div id="g3t" class="capsable" style="position:absolute;top:780px;width:100%;text-align:center;font-family:Inter;font-weight:800;font-size:76px;color:#fff;letter-spacing:-.03em">
     <span class="w">antes</span> <span class="w">de</span> <span class="w">assinar</span></div>
   <div id="g3r1" style="position:absolute;left:170px;top:980px;display:flex;align-items:center;gap:34px">
     <svg width="92" height="92" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#E4EAF4"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#0B0F17" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -97,7 +104,7 @@ function reveal(el,k,dy=16,blur=8){el.style.opacity=k;el.style.transform=`transl
 function buildCaps(){
   const root=$('cap');
   CAPS.forEach((c,ci)=>{
-    const d=document.createElement('div');d.className='chunk';d.id='c'+ci;d.style.display='none';
+    const d=document.createElement('div');d.className='chunk';d.id='c'+ci;d.style.display='none';if(c.hook)d.style.top='405px';
     c.lines.forEach(l=>{
       const ld=document.createElement('span');ld.className='line';
       const hero=l.some(w=>w.h), small=c.lines.some(x=>x.some(w=>w.h))&&!hero;
@@ -122,7 +129,9 @@ function renderCaps(t){
       const d=w.h?0.32:0.24;
       const k=p(t,l[0].t-0.08+i*0.035,d);   // whole line appears together, soft stagger
       reveal(w.el,k,w.h?26:16,w.h?14:8);
-      if(w.h)w.el.style.transform+=` scale(${0.92+0.08*k})`;
+      let sc=w.h?0.92+0.08*k:1;
+      if(w.pulse!==undefined){const u=(t-w.pulse)/0.42;if(u>0&&u<1)sc*=1+0.13*Math.sin(Math.PI*u)*(1-u*0.3);}
+      if(sc!==1)w.el.style.transform+=` scale(${sc})`;
     }));
   });
 }
@@ -132,7 +141,7 @@ const G1={in:14.40,out:19.22,cards:[14.52,15.28,15.98,16.66,17.30]};
 function buildG1(){
   const r=$('g1cards');
   G1.cards.forEach((t0,i)=>{
-    const c=document.createElement('div');c.className='card';c.style.top=(720+i*128)+'px';
+    const c=document.createElement('div');c.className='card';c.style.top=(665+i*122)+'px';
     c.innerHTML=`<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18"/></svg><span class="t">reunião</span><span class="s">SEMANA ${i+1}</span>`;
     r.appendChild(c);G1['c'+i]=c;
   });
@@ -182,7 +191,7 @@ function renderG3(t){
   $('g3strike').style.width=(eio((t-48.42)/0.3)*104)+'%';
 }
 
-window.setup=(caps)=>{CAPS=caps;buildCaps();buildG1();};
+window.setup=(caps,opts)=>{CAPS=caps;if(opts&&opts.caps){document.body.classList.add('caps');document.querySelectorAll('.card .t').forEach(e=>e.classList.add('capsable'));}buildCaps();buildG1();document.querySelectorAll('.card .t').forEach(e=>{if(opts&&opts.caps)e.classList.add('capsable')});};
 window.render=(t)=>{renderG1(t);renderG2(t);renderG3(t);renderCaps(t);};
 </script>
 </body></html>
