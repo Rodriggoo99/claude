@@ -89,3 +89,11 @@ def mono_to_st(x, pan=0.0):
     l, r = np.cos((pan + 1) * np.pi / 4), np.sin((pan + 1) * np.pi / 4)
     return np.stack([x * l * 1.41, x * r * 1.41], 1)
 
+
+def paper(dur=0.35, lvl=-24):
+    """Paper sheet sliding / slapping: crackly band-passed noise with a soft attack."""
+    t = tt(dur); u = t / dur
+    env = np.minimum(u / 0.12, 1) * (1 - u) ** 1.4
+    crackle = 1 + 0.9 * (rng.random(len(t)) < 0.004) * rng.uniform(1, 3, len(t))
+    x = sosfilt(butter(2, [700, 6500], "band", fs=SR, output="sos"), rng.standard_normal(len(t))) * env * crackle
+    return norm(reverb(x, 0.1), lvl)

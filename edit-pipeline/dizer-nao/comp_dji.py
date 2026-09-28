@@ -46,6 +46,20 @@ def warp(img, t):
     M = np.float32([[z, 0, AX * (1 - z) + dx * PX], [0, z, AY * (1 - z) + dy * PX]])
     return cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REFLECT)
 
+# Quote: my own shot blurred behind the text (darkening is in the text layer, so the colour is untouched here).
+QUOTE_BLUR = (21.40, 21.76, 24.30, 24.58)  # in-start, in-end, out-start, out-end
+def blur_k(t):
+    a, b, c, d = QUOTE_BLUR
+    return eio((t - a) / (b - a)) * (1 - eio((t - c) / (d - c)))
+
+def soft(img, k, sigma=18):
+    if k <= 0:
+        return img
+    s = cv2.resize(img, (W // 4, H // 4), interpolation=cv2.INTER_AREA)
+    s = cv2.GaussianBlur(s, (0, 0), sigma * PX / 4)
+    s = cv2.resize(s, (W, H), interpolation=cv2.INTER_LINEAR)
+    return np.clip(img.astype(np.float32) * (1 - k) + s.astype(np.float32) * k + 0.5, 0, 65535).astype(np.uint16)
+
 def read_png(path):
     if not os.path.exists(path):
         return None
@@ -109,7 +123,7 @@ def out_frames():
         if j != round(k * SPEED):
             continue
         t = k / FPS
-        yield k, t, warp(f, t)
+        yield k, t, soft(warp(f, t), blur_k(t))
         k += 1
 
 YUV10 = "scale=out_color_matrix=bt709:out_range=tv:in_range=pc:flags=accurate_rnd+full_chroma_int"

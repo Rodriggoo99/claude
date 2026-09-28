@@ -39,13 +39,20 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
 | Situação | Recurso |
 |---|---|
-| Hook / clímax | Palavra gigante atrás de mim (profundidade) + impacto sonoro |
+| Hook / clímax | Palavra gigante atrás de mim (profundidade) + impacto sonoro — **não usar sempre no hook, variar** |
 | Lista, passos, "antes vs depois", números | **Ecrã editorial**: papel quadriculado creme, tiras de papel rasgado com texto serifado, marcador âmbar e gráficos desenhados à mão |
-| Citação / frase marcante | **Citação cinematográfica**: fundo desfocado e escurecido, texto serifado grande, riscos/círculos desenhados à mão |
+| Citação / frase marcante | **Citação cinematográfica**: o **meu próprio plano** por trás, desfocado e escurecido (nunca um fundo de cor), texto serifado grande, riscos/círculos desenhados à mão |
 | Mostrar exemplos de conteúdo/produtos | Ecrã claro (off-white) com mockups de telemóvel e sombra suave |
-| Repetição/ênfase ("mais vezes não") | Palavras espalhadas na cena, várias escalas e opacidades |
+| Repetição/ênfase ("mais vezes não") | Palavras espalhadas na cena (**esporádico, 3–4 no máximo**), várias escalas e opacidades, **sempre atrás de mim** |
 | CTA "guarda/comenta" | Ícone nativo do Instagram animado (guardar, comentário) |
-- **Evitar:** o mesmo ecrã azul-escuro com tabelas/cartões em todos os vídeos.
+- **Nunca** ecrãs azul-escuro com tabelas/cartões/UI — "vê-se que é AI". Tudo **cinematográfico e clean**.
+- **Nada à frente da minha cara.** Qualquer palavra/elemento que se cruze com a cabeça vai para trás de mim (recorte da silhueta).
+- Gráficos de números (ex.: mais clientes ↑ vs faturação ↓) = **gráfico desenhado à mão** no ecrã editorial (tinta preta + marcador âmbar, círculo à mão no ponto-chave).
+
+## Referências (cortes, legendas, motion)
+- https://www.instagram.com/reel/DXT4_AUJGGm/ — ecrã editorial (papel quadriculado, tiras rasgadas, gráfico à mão), legendas pequenas bold + itálico
+- https://www.instagram.com/reel/DRpAdkyETBs/ — legendas 1–3 palavras ao peito, palavras atrás do sujeito, look cinematográfico
+- https://www.instagram.com/reel/DBqaWrLttT_/ — legenda simples ao peito, 1 palavra de cada vez, âmbar só em números
 
 ## Som
 - Voz a **-14 LUFS**. Efeitos discretos por baixo da voz (whooshes nas transições, papel a deslizar, marcador a riscar, impacto nas palavras-herói). Sem música sem licença.
