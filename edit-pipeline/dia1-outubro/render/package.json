@@ -1,0 +1,11 @@
+{
+  "name": "render-dia1",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@fontsource/instrument-serif": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/inter-tight": "^5.3.0",
+    "playwright": "^1.63.0"
+  }
+}

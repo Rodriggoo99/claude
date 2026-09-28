@@ -1,0 +1,71 @@
+[
+ {"start": 0.00, "end": 1.45, "y": 1245, "lines": [
+   {"t": 0.00, "k": "label", "text": "hoje é dia"},
+   {"t": 0.55, "k": "big", "text": "*1* de outubro"}]},
+ {"start": 2.05, "end": 3.38, "y": 1265, "lines": [
+   {"t": 2.08, "k": "label", "text": "dias para o"},
+   {"t": 2.78, "k": "serif", "text": "final do ano"}]},
+ {"start": 3.40, "end": 5.30, "y": 1250, "lines": [
+   {"t": 3.52, "k": "label", "text": "hoje acaba a minha maior"},
+   {"t": 4.56, "k": "serif", "text": "desculpa", "strike": [4.72, 0.2]}]},
+
+ {"start": 14.58, "end": 15.84, "y": 1240, "lines": [
+   {"t": 14.58, "k": "label", "text": "só que fui percebendo"},
+   {"t": 15.27, "k": "serif", "text": "ao longo do ano"}]},
+ {"start": 15.86, "end": 17.40, "y": 1265, "lines": [
+   {"t": 15.98, "k": "label", "text": "o problema não era"},
+   {"t": 16.70, "k": "big", "text": "falta de tempo", "wt": [16.70, 16.86, 17.02], "strike": [17.16, 0.18, 2]}]},
+ {"start": 17.42, "end": 19.06, "y": 1265, "lines": [
+   {"t": 17.42, "k": "label", "text": "o problema era"},
+   {"t": 18.00, "k": "big", "text": "falta de *prazo*", "wt": [18.00, 18.22, 18.40], "circle": [18.50, 0.26, 2]}]},
+ {"start": 19.08, "end": 20.10, "y": 1235, "lines": [
+   {"t": 19.08, "k": "label", "text": "clientes têm"},
+   {"t": 19.28, "k": "serif", "text": "data de entrega"}]},
+ {"start": 20.12, "end": 21.80, "y": 1275, "lines": [
+   {"t": 20.17, "k": "label", "text": "a minha empresa tem"},
+   {"t": 21.36, "k": "big", "text": "tarefas"}]},
+ {"start": 21.82, "end": 22.96, "y": 1250, "lines": [
+   {"t": 21.84, "k": "label", "text": "que têm de ser"},
+   {"t": 22.24, "k": "big", "text": "realizadas"}]},
+ {"start": 22.98, "end": 23.59, "y": 1240, "lines": [
+   {"t": 22.98, "k": "label", "text": "o conteúdo"},
+   {"t": 23.24, "k": "serif", "text": "*pessoal*"}]},
+ {"start": 23.61, "end": 25.41, "y": 1260, "lines": [
+   {"t": 23.61, "k": "label", "text": "é o único em que"},
+   {"t": 24.48, "k": "big", "text": "ninguém"},
+   {"t": 24.69, "k": "label", "text": "está lá para cobrar", "wt": [24.69, 24.90, 25.03, 25.16]}]},
+ {"start": 25.43, "end": 27.22, "y": 1250, "lines": [
+   {"t": 25.43, "k": "label", "text": "e por isso é sempre"},
+   {"t": 26.40, "k": "serif", "text": "o primeiro a cair", "wt": [26.40, 26.54, 26.70, 26.85], "drop": 26.98}]},
+ {"start": 27.26, "end": 28.38, "y": 1245, "lines": [
+   {"t": 27.21, "k": "label", "text": "então"},
+   {"t": 27.47, "k": "serif", "text": "a partir de hoje"}]},
+ {"start": 28.40, "end": 28.98, "y": 1250, "lines": [
+   {"t": 28.40, "k": "big", "text": "é verdade"}]},
+
+ {"start": 33.46, "end": 34.32, "y": 1245, "lines": [
+   {"t": 33.46, "k": "label", "text": "vou mostrar"},
+   {"t": 33.50, "k": "serif", "text": "o que faço"}]},
+ {"start": 34.34, "end": 35.54, "y": 1265, "lines": [
+   {"t": 34.34, "k": "label", "text": "os negócios que"},
+   {"t": 34.96, "k": "big", "text": "estou a construir"}]},
+ {"start": 35.56, "end": 37.02, "y": 1240, "lines": [
+   {"t": 35.56, "k": "label", "text": "e em geral"},
+   {"t": 36.19, "k": "serif", "text": "o meu dia-a-dia"}]},
+ {"start": 37.05, "end": 38.20, "y": 1260, "lines": [
+   {"t": 37.05, "k": "label", "text": "no final destes"},
+   {"t": 37.79, "k": "big", "text": "*3* meses"}]},
+ {"start": 38.23, "end": 39.16, "y": 1250, "lines": [
+   {"t": 38.23, "k": "label", "text": "vocês vão"},
+   {"t": 38.76, "k": "big", "text": "estar cá"}]},
+ {"start": 39.18, "end": 40.45, "y": 1245, "lines": [
+   {"t": 39.18, "k": "label", "text": "e vão ver os"},
+   {"t": 39.84, "k": "serif", "text": "*resultados*"}]},
+
+ {"start": 42.25, "end": 43.39, "y": 1260, "lines": [
+   {"t": 42.25, "k": "label", "text": "que eu vou publicar"},
+   {"t": 42.70, "k": "big", "text": "todos os dias"}]},
+ {"start": 43.41, "end": 44.80, "y": 1245, "lines": [
+   {"t": 43.41, "k": "label", "text": "até"},
+   {"t": 43.70, "k": "big", "text": "*31* de dezembro", "wt": [43.70, 44.07, 44.26]}]}
+]

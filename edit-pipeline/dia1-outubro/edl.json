@@ -1,0 +1,94 @@
+{
+ "fps": 60,
+ "speed": 1.1,
+ "subs": [
+  {
+   "f_in": 0,
+   "f_out": 344,
+   "cut_start": 0
+  },
+  {
+   "f_in": 344,
+   "f_out": 654,
+   "cut_start": 344
+  },
+  {
+   "f_in": 654,
+   "f_out": 750,
+   "cut_start": 654
+  },
+  {
+   "f_in": 756,
+   "f_out": 856,
+   "cut_start": 750
+  },
+  {
+   "f_in": 856,
+   "f_out": 970,
+   "cut_start": 850
+  },
+  {
+   "f_in": 970,
+   "f_out": 1156,
+   "cut_start": 964
+  },
+  {
+   "f_in": 1156,
+   "f_out": 1248,
+   "cut_start": 1150
+  },
+  {
+   "f_in": 1252,
+   "f_out": 1342,
+   "cut_start": 1242
+  },
+  {
+   "f_in": 1342,
+   "f_out": 1527,
+   "cut_start": 1332
+  },
+  {
+   "f_in": 1534,
+   "f_out": 1710,
+   "cut_start": 1517
+  },
+  {
+   "f_in": 1710,
+   "f_out": 1816,
+   "cut_start": 1693
+  },
+  {
+   "f_in": 1816,
+   "f_out": 1900,
+   "cut_start": 1799
+  },
+  {
+   "f_in": 1900,
+   "f_out": 2207,
+   "cut_start": 1883
+  },
+  {
+   "f_in": 2212,
+   "f_out": 2386,
+   "cut_start": 2190
+  },
+  {
+   "f_in": 2386,
+   "f_out": 2474,
+   "cut_start": 2364
+  },
+  {
+   "f_in": 2474,
+   "f_out": 2694,
+   "cut_start": 2452
+  },
+  {
+   "f_in": 2694,
+   "f_out": 2970,
+   "cut_start": 2672
+  }
+ ],
+ "total_cut_frames": 2948,
+ "n_out": 2680,
+ "total_out": 44.666666666666664
+}
