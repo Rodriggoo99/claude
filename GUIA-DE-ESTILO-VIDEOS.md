@@ -1,0 +1,39 @@
+# Guia de estilo — vídeos do Rodrigo (Viral Wave Agency)
+
+Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e cinematográfico** — nunca "jogado".
+
+## Corte
+- **Sem frases repetidas.** Quando há vários takes, escolher o melhor por **entoação** (energia, variação de tom, final firme) e por **cara** (olhar para a câmara, expressão confiante, sem olhos fechados/caretas). Nunca usar takes com hesitações a meio.
+- Não perder o fio condutor. Se o hook repete uma frase do fim, escolher outro hook.
+- Corte **bem apertado** entre frases; pausas dramáticas curtas (ex.: antes de "chega") podem ficar.
+- Vídeo final a **1.1x** (áudio com o tom preservado).
+- **Final com CTA de mão:** se no fim eu levo a mão à câmara, manter o gesto e **cortar exatamente quando a mão chega à câmara**.
+
+## Imagem
+- **Não mexer na cor** — faço eu a cor. Trabalhar sempre em 10-bit quando o original é 10-bit (DJI).
+- Entregar: versão final completa + **plate sem texto (10-bit)** + **camada de texto com transparência em ProRes 4444** (funciona no CapCut) + áudio (mix e stems).
+- Tudo dentro das **margens seguras** do Reels/TikTok (1080×1920: 250 px em cima, 480 px em baixo, 120 px à direita, 60 px à esquerda). Verificar frame a frame.
+- Zooms: poucos, suaves, **sempre centrados na cara**.
+
+## Legendas (inspiração: Jack Mason, Bradford Marais)
+- **1 a 3 palavras de cada vez**, à altura do peito (sobre a roupa, alto contraste), não sempre no mesmo sítio fixo em cima.
+- **Hierarquia de duas escalas:** etiqueta pequena (Inter Bold, maiúsculas, espaçada) + palavra grande (condensada bold, maiúsculas, tracking apertado).
+- **Itálico serifado** (Instrument Serif) para palavras emocionais/elegantes, em minúsculas.
+- **Cor de destaque tirada da cena** (no meu escritório: âmbar/dourado do relógio `#F2B24C`); números e palavras-chave nessa cor. Nada de cores aleatórias.
+- Animação subtil: fade + subida curta + desfoque a desaparecer; palavras-herói com "tracking in".
+- **Profundidade:** palavras-herói grandes **atrás de mim** (recorte da silhueta) em momentos-chave (hook, clímax).
+
+## Motion graphics — variar, nunca repetir a mesma fórmula
+Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
+| Situação | Recurso |
+|---|---|
+| Hook / clímax | Palavra gigante atrás de mim (profundidade) + impacto sonoro |
+| Lista, passos, "antes vs depois", números | **Ecrã editorial**: papel quadriculado creme, tiras de papel rasgado com texto serifado, marcador âmbar e gráficos desenhados à mão |
+| Citação / frase marcante | **Citação cinematográfica**: fundo desfocado e escurecido, texto serifado grande, riscos/círculos desenhados à mão |
+| Mostrar exemplos de conteúdo/produtos | Ecrã claro (off-white) com mockups de telemóvel e sombra suave |
+| Repetição/ênfase ("mais vezes não") | Palavras espalhadas na cena, várias escalas e opacidades |
+| CTA "guarda/comenta" | Ícone nativo do Instagram animado (guardar, comentário) |
+- **Evitar:** o mesmo ecrã azul-escuro com tabelas/cartões em todos os vídeos.
+
+## Som
+- Voz a **-14 LUFS**. Efeitos discretos por baixo da voz (whooshes nas transições, papel a deslizar, marcador a riscar, impacto nas palavras-herói). Sem música sem licença.
