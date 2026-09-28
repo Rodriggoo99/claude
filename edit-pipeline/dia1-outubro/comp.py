@@ -7,6 +7,7 @@ import numpy as np, cv2, subprocess, sys, os, json, math
 HERE = os.path.dirname(os.path.abspath(__file__))
 D = json.load(open(os.path.join(HERE, "edl.json")))
 FPS, SPEED, SUBS, N_OUT = D["fps"], D["speed"], D["subs"], D["n_out"]
+DS = D.get("design_speed", SPEED)   # timeline the zoom/shake times below were authored on
 SRC = os.environ.get("SRC", "/home/user/work/dia1/src.mp4")
 FF = "ffmpeg"
 FACE = (590 / 1080, 840 / 1920)  # face centre (fraction of frame)
@@ -15,7 +16,7 @@ def eio(x):
     x = min(max(x, 0.0), 1.0)
     return 4 * x ** 3 if x < .5 else 1 - (-2 * x + 2) ** 3 / 2
 
-def zoom(t):  # output-timeline seconds; zoom changes sit on the existing jump cuts
+def zoom(t):  # design-timeline seconds; zoom changes sit on the existing jump cuts
     if t < 5.212:              return 1.0 + 0.05 * eio(t / 1.95)                 # hook push-in, lands on "92"
     if 12.879 <= t < 14.606:   return 1.06                                       # "o que fica de fora é sempre isto"
     if 17.424 <= t < 18.818:   return 1.08                                       # "falta de prazo"
@@ -30,7 +31,8 @@ def shake(t):  # impact when the 92 lands (1080-scale px)
     return a * math.sin(2 * math.pi * 21 * u), 0.7 * a * math.sin(2 * math.pi * 17 * u + 1.3)
 
 def xform(t, W, H):
-    z = zoom(t); sx, sy = shake(t); k = W / 1080
+    td = t * SPEED / DS
+    z = zoom(td); sx, sy = shake(td); k = W / 1080
     ax, ay = FACE[0] * W, FACE[1] * H
     return np.float32([[z, 0, ax * (1 - z) + sx * k], [0, z, ay * (1 - z) + sy * k]])
 

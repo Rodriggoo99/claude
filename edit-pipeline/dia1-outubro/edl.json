@@ -1,6 +1,7 @@
 {
  "fps": 60,
- "speed": 1.1,
+ "speed": 1.0,
+ "design_speed": 1.1,
  "subs": [
   {
    "f_in": 0,
@@ -89,6 +90,6 @@
   }
  ],
  "total_cut_frames": 2948,
- "n_out": 2680,
- "total_out": 44.666666666666664
+ "n_out": 2948,
+ "total_out": 49.13333333333333
 }

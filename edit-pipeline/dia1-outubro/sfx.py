@@ -1,4 +1,5 @@
-# Sound design for "Dia 1 de Outubro" on the 1.1x output timeline, mixed under the -14 LUFS voice.
+# Sound design for "Dia 1 de Outubro", mixed under the -14 LUFS voice. Event times are on the design timeline (1.1x)
+# and are mapped to the output timeline via edl.json.
 import sys, os, numpy as np, subprocess
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dizer-nao"))
 from sfx_lib import *
@@ -16,9 +17,12 @@ def paper(dur=0.45, lvl=-24):          # sheet sliding
     x = sosfilt(butter(2, [700, 6500], "band", fs=SR, output="sos"), rng.standard_normal(len(t))) * env
     return norm(reverb(x, 0.1), lvl)
 
+import json
+_D = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "edl.json")))
+K = _D.get("design_speed", _D["speed"]) / _D["speed"]
 EV = []
-def at(t, snd, pan=0.0): EV.append((t, mono_to_st(snd, pan)))
-def ending_at(t, snd, pan=0.0): at(t - len(snd) / SR * 0.85, snd, pan)
+def at(t, snd, pan=0.0): EV.append((t * K, mono_to_st(snd, pan)))
+def ending_at(t, snd, pan=0.0): EV.append((t * K - len(snd) / SR * 0.85, mono_to_st(snd, pan)))
 
 # ---- hook: 92 dragged in, digits rolling, impact on landing
 ending_at(1.95, whoosh(0.55, 350, 4800, 0.85, lvl=-19), 0.25)

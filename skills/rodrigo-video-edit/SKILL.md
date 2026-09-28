@@ -13,7 +13,7 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 - **Sem frases repetidas.** Quando há vários takes, escolher o melhor por **entoação** (energia, variação de tom, final firme) e por **cara** (olhar para a câmara, expressão confiante, sem olhos fechados/caretas). Nunca usar takes com hesitações a meio.
 - Não perder o fio condutor. Se o hook repete uma frase do fim, escolher outro hook.
 - Corte **bem apertado** entre frases; pausas dramáticas curtas (ex.: antes de "chega") podem ficar.
-- Vídeo final a **1.1x** (áudio com o tom preservado).
+- **Não mexer na velocidade** — o Rodrigo já entrega o vídeo acelerado (1.1x) por ele; manter a velocidade do ficheiro que ele manda (vídeo e áudio a 1.0x).
 - **Final com CTA de mão:** se no fim eu levo a mão à câmara, manter o gesto e **cortar exatamente quando a mão chega à câmara**.
 
 ## Imagem
@@ -57,6 +57,6 @@ Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
 
 ## Fluxo de trabalho
 1. Transcrever (Whisper large-v3, pt) com tempos por palavra; verificar zonas com som que a transcrição saltou.
-2. Agrupar takes por frase; escolher o melhor (entoação medida + frames da cara); corte apertado; 1.1x; confirmar com nova transcrição.
+2. Agrupar takes por frase; escolher o melhor (entoação medida + frames da cara); corte apertado; sem mexer na velocidade; confirmar com nova transcrição.
 3. Mandar **pré-visualização 1080p** para aprovação.
 4. Final 4K: plate 10-bit + texto ProRes 4444 alpha + áudio separado + versão completa. Verificar margens seguras frame a frame.

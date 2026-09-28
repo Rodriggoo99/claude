@@ -3,7 +3,10 @@
 import cv2, numpy as np, glob, sys, os
 d = sys.argv[1]; S = 0.5
 L, T, R, B = 60 * S, 250 * S, (1080 - 120) * S, (1920 - 480) * S
-TRANSIT = [(1.40, 1.97), (28.94, 29.30), (33.40, 33.72)]  # elements sliding in/out of frame
+import json
+_D = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "edl.json")))
+K = _D.get("design_speed", _D["speed"]) / _D["speed"]
+TRANSIT = [(a * K, b * K) for a, b in [(1.40, 1.97), (28.94, 29.30), (33.40, 33.72)]]  # elements sliding in/out (design time)
 bad = []
 for p in sorted(glob.glob(os.path.join(d, "m_*.png"))):
     k = int(p[-9:-4]); t = k / 60

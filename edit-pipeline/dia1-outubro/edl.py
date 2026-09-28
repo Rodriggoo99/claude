@@ -1,8 +1,10 @@
 # Builds the EDL for "Dia 1 de Outubro": the source already comes pre-cut (single take, jump cuts),
-# so we only tighten the few pauses > 0.19 s at the existing cuts, then map words to the 1.1x output timeline.
+# so we only tighten the few pauses > 0.19 s at the existing cuts, then map words to the output timeline.
+# Speed: 1.0 (Rodrigo: the 1.1x speed-up was noticeable on this one). The graphics/SFX/zoom timings were authored on the
+# 1.1x timeline ("design_speed"); comp.py, render.js and sfx.py rescale them, so everything stays locked to the voice.
 import json, numpy as np, subprocess
 
-FPS, SPEED, N = 60, 1.1, 2970
+FPS, SPEED, DESIGN_SPEED, N = 60, 1.0, 1.1, 2970
 SRC = "/home/user/work/dia1/src.mp4"
 CUTS = [344, 654, 756, 856, 970, 1156, 1252, 1342, 1534, 1710, 1816, 1900, 2212, 2386, 2474, 2694]  # frame-diff jump cuts
 
@@ -43,7 +45,7 @@ def src2out(t):
 
 T = json.load(open("transcript.json"))
 words = [{"w": w["w"].strip(), "s": round(src2out(w["s"]), 3), "e": round(src2out(w["e"]), 3)} for seg in T for w in seg["words"]]
-json.dump({"fps": FPS, "speed": SPEED, "subs": subs, "total_cut_frames": total_cut, "n_out": n_out,
+json.dump({"fps": FPS, "speed": SPEED, "design_speed": DESIGN_SPEED, "subs": subs, "total_cut_frames": total_cut, "n_out": n_out,
            "total_out": n_out / FPS}, open("edl.json", "w"), indent=1)
 json.dump(words, open("words_out.json", "w"), ensure_ascii=False, indent=0)
 removed = N - total_cut

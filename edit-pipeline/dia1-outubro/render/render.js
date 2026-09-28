@@ -31,9 +31,12 @@ async function worker(browser, caps, frames, outdir, dsf, mode) {
   const [outdir, mode, a, b, c, d] = process.argv.slice(2);
   fs.mkdirSync(outdir, { recursive: true });
   const caps = JSON.parse(fs.readFileSync(path.join(__dirname, 'captions.json')));
+  // overlay times are authored on the design timeline (1.1x); map output time -> design time
+  const edl = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'edl.json')));
+  const tk = edl.speed / (edl.design_speed || edl.speed);
   let frames = [], workers = 1, dsf = 1;
   if (mode === 'times') {
-    frames = a.split(',').map((t) => [`t_${t}.png`, parseFloat(t)]);
+    frames = a.split(',').map((t) => [`t_${t}.png`, parseFloat(t) * tk]);
     dsf = parseFloat(b || '0.5');
   } else {
     const fps = parseFloat(a), n = parseInt(b);
@@ -41,7 +44,7 @@ async function worker(browser, caps, frames, outdir, dsf, mode) {
     dsf = mode === 'measure' ? 0.5 : parseFloat(d || '1');
     const lo = parseInt(process.env.FROM || '0'), hi = Number(process.env.TO || 1e9);
     const pre = mode === 'measure' ? 'm_' : 'f_';
-    for (let i = 0; i < n; i++) if (i >= lo && i <= hi) frames.push([`${pre}${String(i).padStart(5, '0')}.png`, i / fps]);
+    for (let i = 0; i < n; i++) if (i >= lo && i <= hi) frames.push([`${pre}${String(i).padStart(5, '0')}.png`, (i / fps) * tk]);
   }
   const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
   const parts = Array.from({ length: workers }, (_, w) => frames.filter((_, i) => i % workers === w));

@@ -1,15 +1,18 @@
 # Dia 1 de Outubro — edição
 
 Origem: `Marca Pessoal Dia 1 de Outubro Pré Claude.mp4` (4K vertical, H.264 8-bit, 60 fps, 49,5 s, já pré-cortado por ti).
-Resultado: **44,7 s** a 1.1x (tom de voz preservado), voz a **-14 LUFS**. **A cor não foi mexida.**
+Resultado: **49,1 s** à **velocidade original (1.0x)**, voz a **-14 LUFS**. **A cor não foi mexida.**
+
+> A primeira pré-visualização estava a 1.1x (regra do guia) e a aceleração notava-se — a pedido do Rodrigo ficou a 1.0x.
+> Gráficos, zooms e efeitos foram re-sincronizados com a voz.
 
 ## Estado
-- [x] **Pré-visualização 1080p** para aprovação — `Dia 1 de Outubro - PREVIEW 1080p.mp4`
+- [x] **Pré-visualização 1080p** para aprovação — `Dia 1 de Outubro - PREVIEW 1080p.mp4` (v2, 1.0x; conteúdo aprovado, "o 92 no hook está incrível")
 - [ ] Final 4K (plate 10-bit sem texto + texto ProRes 4444 com alpha + áudio separado + versão completa) — só depois de aprovares
 
 ## Corte
 O vídeo já vinha cortado frase a frase (16 jump cuts, sem frases repetidas nem hesitações), por isso só apertei
-as 4 pausas que passavam de 0,19 s nos cortes existentes (−0,37 s no total) e passei a 1.1x. A nova transcrição
+as 4 pausas que passavam de 0,19 s nos cortes existentes (−0,37 s no total). A nova transcrição
 do resultado confirma todas as frases, pela ordem, sem palavras cortadas.
 No fim não há gesto de mão à câmara, por isso o vídeo termina em "dezembro" (com um fade de 30 ms no áudio, porque o original corta seco).
 
@@ -31,4 +34,4 @@ Todas as frames verificadas dentro das margens seguras Reels/TikTok (letras reai
 > Ideia para a série: o calendário dos 92 dias pode voltar em todos os vídeos com mais um dia preenchido.
 
 ## Pipeline
-`edit-pipeline/dia1-outubro/` — `edl.py` (corte), `audio.py` (voz 1.1x, -14 LUFS), `sfx.py` (efeitos), `render/` (legendas e gráficos em HTML → PNG com alpha), `comp.py` (composição 16-bit, recorte de profundidade, preview/final), `safe_check.py` (margens frame a frame).
+`edit-pipeline/dia1-outubro/` — `edl.py` (corte e velocidade), `audio.py` (voz, -14 LUFS), `sfx.py` (efeitos), `render/` (legendas e gráficos em HTML → PNG com alpha), `comp.py` (composição 16-bit, recorte de profundidade, preview/final), `safe_check.py` (margens frame a frame).
