@@ -86,3 +86,26 @@ if __name__ == "__main__" and sys.argv[1] == "final":
         alpha = np.full((H, W, 1), int(k * 65535), np.uint16)             # fades in/out on its own alpha
         enc.stdin.write(np.dstack([s, alpha]).tobytes())
     enc.stdin.close(); enc.wait(); print("final done", enc.returncode)
+
+if __name__ == "__main__" and sys.argv[1] == "full":
+    # single finished file: his graded cut + blur for the rule + text/graphics + final mix (8-bit source -> H.264 High, high bitrate)
+    W, H = 2160, 3840
+    ov, out = sys.argv[2], sys.argv[3]
+    enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", FPS_STR, "-i", "-",
+                            "-i", "final_mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "15",
+                            "-profile:v", "high", "-level", "5.2", "-pix_fmt", "yuv420p", "-g", "120", "-c:a", "aac", "-b:a", "320k",
+                            "-shortest", "-movflags", "+faststart"] + TAGS + [out], stdin=subprocess.PIPE)
+    for k, f in enumerate(frames(W, H, fmt="rgb24")):
+        f = soft(f, blur_k(k / FPS), W, H)
+        o = overlay(f"{ov}/front/f_{k:05d}.png", W, H)
+        if o is not None:
+            ys, xs = np.nonzero(o[::8, ::8, 3])  # blend only inside the graphics' bounding box
+            if len(ys):
+                y0, y1, x0, x1 = ys.min() * 8, min(H, ys.max() * 8 + 8), xs.min() * 8, min(W, xs.max() * 8 + 8)
+                a = o[y0:y1, x0:x1, 3:4].astype(np.float32) / 255
+                f = f.copy()
+                f[y0:y1, x0:x1] = (o[y0:y1, x0:x1, :3] * a + f[y0:y1, x0:x1] * (1 - a) + 0.5).astype(np.uint8)
+        enc.stdin.write(f.tobytes())
+        if k % 600 == 0:
+            print("frame", k, flush=True)
+    enc.stdin.close(); enc.wait(); print("full done", enc.returncode)
