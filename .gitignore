@@ -1,1 +1,5 @@
 node_modules/
+__pycache__/
+dji.MP4
+_work/
+edit-pipeline/dizer-nao/*.wav

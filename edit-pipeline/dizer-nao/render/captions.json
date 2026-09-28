@@ -1,252 +1,32 @@
 [
- {
-  "start": 0.0,
-  "end": 2.16,
-  "hook": true,
-  "lines": [
-   {
-    "t": -1,
-    "text": "dizer *não* a clientes"
-   },
-   {
-    "t": 1.0,
-    "text": "fez-me ganhar",
-    "small": true
-   },
-   {
-    "t": 1.4,
-    "text": "#mais dinheiro",
-    "pulse": 1.44,
-    "size": 100
-   }
-  ]
- },
- {
-  "start": 2.16,
-  "end": 3.72,
-  "lines": [
-   {
-    "t": 2.16,
-    "text": "no início eu aceitava"
-   },
-   {
-    "t": 3.22,
-    "text": "*quase* *tudo*"
-   }
-  ]
- },
- {
-  "start": 3.72,
-  "end": 5.0,
-  "lines": [
-   {
-    "t": 3.72,
-    "text": "e eu sujeitava-me"
-   },
-   {
-    "t": 4.56,
-    "text": "a isso"
-   }
-  ]
- },
- {
-  "start": 5.0,
-  "end": 7.1,
-  "lines": [
-   {
-    "t": 5.02,
-    "text": "qualquer projeto"
-   },
-   {
-    "t": 6.06,
-    "text": "a qualquer *preço*"
-   }
-  ]
- },
- {
-  "start": 7.1,
-  "end": 9.0,
-  "lines": [
-   {
-    "t": 7.14,
-    "text": "trabalhava *mais*"
-   },
-   {
-    "t": 7.88,
-    "text": "e ganhava *menos*"
-   }
-  ]
- },
- {
-  "start": 9.0,
-  "end": 10.24,
-  "lines": [
-   {
-    "t": 9.02,
-    "text": "e a verdade é que"
-   },
-   {
-    "t": 9.68,
-    "text": "eu comecei a perceber"
-   }
-  ]
- },
- {
-  "start": 10.24,
-  "end": 11.24,
-  "lines": [
-   {
-    "t": 10.26,
-    "text": "que não me sobrava"
-   },
-   {
-    "t": 11.04,
-    "text": "*tempo*"
-   }
-  ]
- },
- {
-  "start": 11.24,
-  "end": 12.36,
-  "lines": [
-   {
-    "t": 11.26,
-    "text": "para os clientes *bons*"
-   }
-  ]
- },
- {
-  "start": 12.36,
-  "end": 13.72,
-  "lines": [
-   {
-    "t": 12.38,
-    "text": "até o dia em que"
-   },
-   {
-    "t": 13.12,
-    "text": "eu disse"
-   }
-  ]
- },
- {
-  "start": 13.72,
-  "end": 14.3,
-  "lines": [
-   {
-    "t": 13.72,
-    "text": "#chega.",
-    "pulse": 13.74
-   }
-  ]
- },
- {
-  "start": 14.3,
-  "end": 16.68,
-  "lines": [
-   {
-    "t": 14.32,
-    "text": "hoje eu digo mais"
-   },
-   {
-    "t": 15.22,
-    "text": "vezes *não* do que *sim*"
-   }
-  ]
- },
- {
-  "start": 16.68,
-  "end": 18.08,
-  "lines": [
-   {
-    "t": 16.7,
-    "text": "e sinceramente"
-   },
-   {
-    "t": 17.54,
-    "text": "acho que foi"
-   }
-  ]
- },
- {
-  "start": 18.08,
-  "end": 19.56,
-  "lines": [
-   {
-    "t": 18.1,
-    "text": "a melhor *decisão*"
-   },
-   {
-    "t": 18.96,
-    "text": "da minha vida"
-   }
-  ]
- },
- {
-  "start": 19.56,
-  "end": 20.88,
-  "lines": [
-   {
-    "t": 19.58,
-    "text": "houve uma frase"
-   },
-   {
-    "t": 20.12,
-    "text": "que eu li num *livro*"
-   }
-  ]
- },
- {
-  "start": 20.88,
-  "end": 21.62,
-  "lines": [
-   {
-    "t": 20.9,
-    "text": "que era a seguinte"
-   }
-  ]
- },
- {
-  "start": 24.48,
-  "end": 25.7,
-  "lines": [
-   {
-    "t": 24.5,
-    "text": "guarda *isto*",
-    "bookmark": 24.86
-   },
-   {
-    "t": 25.0,
-    "text": "para a próxima vez"
-   }
-  ]
- },
- {
-  "start": 25.7,
-  "end": 26.66,
-  "lines": [
-   {
-    "t": 25.72,
-    "text": "em que estiveres"
-   },
-   {
-    "t": 26.28,
-    "text": "na *dúvida*"
-   }
-  ]
- },
- {
-  "start": 26.66,
-  "end": 29.0,
-  "lines": [
-   {
-    "t": 26.68,
-    "text": "entre aceitar"
-   },
-   {
-    "t": 27.3,
-    "text": "ou não um *projeto*"
-   }
-  ]
- }
+ {"start": 0.00,  "end": 1.00,  "items": [{"t": 0.00, "k": "label", "text": "dizer não a"}, {"t": 0.58, "k": "big", "text": "clientes"}]},
+ {"start": 1.00,  "end": 2.16,  "items": [{"t": 1.00, "k": "label", "text": "fez-me ganhar"}, {"t": 1.44, "k": "big", "text": "mais dinheiro", "acc": true, "pulse": 1.52}]},
+ {"start": 2.16,  "end": 3.22,  "items": [{"t": 2.16, "k": "label", "text": "no início eu"}, {"t": 2.74, "k": "big", "text": "aceitava"}]},
+ {"start": 3.22,  "end": 3.72,  "items": [{"t": 3.22, "k": "serif", "text": "quase tudo", "acc": true}]},
+ {"start": 3.72,  "end": 4.56,  "items": [{"t": 3.72, "k": "label", "text": "e eu"}, {"t": 3.94, "k": "big", "text": "sujeitava-me"}]},
+ {"start": 4.56,  "end": 5.02,  "items": [{"t": 4.56, "k": "big", "text": "a isso"}]},
+ {"start": 5.02,  "end": 6.06,  "items": [{"t": 5.04, "k": "label", "text": "qualquer"}, {"t": 5.38, "k": "big", "text": "projeto"}]},
+ {"start": 6.06,  "end": 7.12,  "items": [{"t": 6.06, "k": "label", "text": "a qualquer"}, {"t": 6.48, "k": "big", "text": "preço", "acc": true}]},
+ {"start": 7.12,  "end": 7.88,  "items": [{"t": 7.14, "k": "label", "text": "trabalhava"}, {"t": 7.54, "k": "big", "text": "mais"}]},
+ {"start": 7.88,  "end": 9.00,  "items": [{"t": 7.88, "k": "label", "text": "e ganhava"}, {"t": 8.46, "k": "big", "text": "menos", "acc": true}]},
+ {"start": 9.00,  "end": 9.68,  "items": [{"t": 9.02, "k": "label", "text": "e a verdade"}, {"t": 9.44, "k": "big", "text": "é que"}]},
+ {"start": 9.68,  "end": 10.28, "items": [{"t": 9.68, "k": "label", "text": "eu comecei"}, {"t": 10.08, "k": "big", "text": "a perceber"}]},
+ {"start": 10.28, "end": 11.26, "items": [{"t": 10.28, "k": "label", "text": "que não me sobrava"}, {"t": 11.04, "k": "serif", "text": "tempo", "acc": true}]},
+ {"start": 11.26, "end": 12.38, "items": [{"t": 11.26, "k": "label", "text": "para os clientes"}, {"t": 11.98, "k": "serif", "text": "bons."}]},
+ {"start": 12.38, "end": 13.72, "items": [{"t": 12.38, "k": "label", "text": "até o dia em que"}, {"t": 13.18, "k": "big", "text": "eu disse"}]},
+ {"start": 14.30, "end": 15.50, "items": [{"t": 14.30, "k": "label", "text": "hoje eu digo mais"}, {"t": 15.10, "k": "big", "text": "vezes"}]},
+ {"start": 15.50, "end": 16.14, "items": [{"t": 15.54, "k": "big", "text": "não", "acc": true, "pulse": 15.60}]},
+ {"start": 16.14, "end": 16.68, "items": [{"t": 16.14, "k": "label", "text": "do que"}, {"t": 16.32, "k": "serif", "text": "sim", "dim": true}]},
+ {"start": 16.68, "end": 17.50, "items": [{"t": 16.70, "k": "label", "text": "e"}, {"t": 16.84, "k": "serif", "text": "sinceramente"}]},
+ {"start": 17.50, "end": 18.10, "items": [{"t": 17.50, "k": "label", "text": "acho que foi"}]},
+ {"start": 18.10, "end": 18.96, "items": [{"t": 18.10, "k": "label", "text": "a melhor"}, {"t": 18.52, "k": "serif", "text": "decisão", "acc": true}]},
+ {"start": 18.96, "end": 19.58, "items": [{"t": 18.96, "k": "label", "text": "da minha"}, {"t": 19.12, "k": "big", "text": "vida"}]},
+ {"start": 19.58, "end": 20.14, "items": [{"t": 19.60, "k": "label", "text": "houve uma"}, {"t": 19.84, "k": "big", "text": "frase"}]},
+ {"start": 20.14, "end": 20.90, "items": [{"t": 20.14, "k": "label", "text": "que eu li num"}, {"t": 20.56, "k": "serif", "text": "livro"}]},
+ {"start": 20.90, "end": 21.56, "items": [{"t": 20.90, "k": "label", "text": "que era a seguinte"}]},
+ {"start": 24.48, "end": 25.16, "items": [{"t": 24.50, "k": "label", "text": "guarda"}, {"t": 24.84, "k": "big", "text": "isto", "acc": true}], "bookmark": 24.86},
+ {"start": 25.16, "end": 25.72, "items": [{"t": 25.16, "k": "label", "text": "para a próxima"}, {"t": 25.42, "k": "big", "text": "vez"}]},
+ {"start": 25.72, "end": 26.68, "items": [{"t": 25.72, "k": "label", "text": "em que estiveres"}, {"t": 26.28, "k": "serif", "text": "na dúvida"}]},
+ {"start": 26.68, "end": 27.28, "items": [{"t": 26.68, "k": "label", "text": "entre"}, {"t": 26.86, "k": "big", "text": "aceitar"}]},
+ {"start": 27.28, "end": 28.46, "items": [{"t": 27.28, "k": "label", "text": "ou não um"}, {"t": 27.76, "k": "big", "text": "projeto", "acc": true}]}
 ]
