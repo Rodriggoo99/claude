@@ -72,6 +72,9 @@ if music_path:
     duck = duck * lv
     fade = np.minimum(1, np.minimum(np.arange(N) / (0.4 * SR), (N - np.arange(N)) / (1.2 * SR)))
     music = mu * g * (duck * fade)[:, None]
+    # match the approved "Dizer não" mix: music bed at -32.7 LUFS integrated under a -14 LUFS voice
+    write("_work/music_tmp.wav", music, limit=False)
+    music *= db(-32.7 - lufs("_work/music_tmp.wav"))
     mix = mix + music
     write("audio_musica.wav", music, limit=False)
 write("final_mix.wav", mix); write("sfx_only.wav", fx, limit=False); write("voice.wav", voice)
