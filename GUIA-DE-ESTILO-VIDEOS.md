@@ -25,9 +25,9 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 - Animação subtil: fade + subida curta + desfoque a desaparecer; palavras-herói com "tracking in".
 - **Profundidade:** palavras-herói grandes **atrás de mim** (recorte da silhueta) em momentos-chave (hook, clímax).
 
-## Espaço de cima (acima da cabeça) — aproveitar SEMPRE
-- As legendas ficam ao peito, mas o espaço acima da cabeça (zona segura, ~250–650 px) tem de ter sempre elementos com significado: ícones desenhados à mão, chips/botões de UI, gráficos pequenos, palavras espalhadas, relógios, vistos, etc.
-- Sem invadir a cabeça (a não ser palavras de profundidade, atrás de mim).
+## Espaço de cima (acima da cabeça) — com moderação
+- Usar o espaço de cima só em **momentos-chave** (ex.: os "não" espalhados à volta da cabeça, palavras de profundidade no hook/clímax). **Não** encher todas as frases com ícones/elementos em cima — fica demasiado.
+- As legendas ficam ao peito.
 
 ## Entradas com impacto
 - Palavras-herói **entram** (arrastadas/deslizadas com rasto de movimento), nunca aparecem já paradas; som de arrasto (whoosh) + impacto + pequeno abanão de câmara ao aterrar.
