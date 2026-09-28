@@ -24,6 +24,8 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 
 ## Legendas (inspiração: Jack Mason, Bradford Marais)
 - **1 a 3 palavras de cada vez**, à altura do peito (sobre a roupa, alto contraste), não sempre no mesmo sítio fixo em cima.
+- **Roupa clara (t-shirt branca):** legendas **em cima, sobre a parede** (branco + âmbar), nunca em cima da t-shirt. Na dúvida, fazer um print de teste e mandar.
+- **Centrar no meio do ecrã (x = 540)** com **120 px de margem dos dois lados** (máx. 840 px de largura) — não centrar entre as margens assimétricas, fica puxado para a esquerda.
 - **Hierarquia de duas escalas:** etiqueta pequena (Inter Bold, maiúsculas, espaçada) + palavra grande (condensada bold, maiúsculas, tracking apertado).
 - **Itálico serifado** (Instrument Serif) para palavras emocionais/elegantes, em minúsculas.
 - **Cor de destaque tirada da cena** (no meu escritório: âmbar/dourado do relógio `#F2B24C`); números e palavras-chave nessa cor. Nada de cores aleatórias.
@@ -67,3 +69,8 @@ Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
 2. Agrupar takes por frase; escolher o melhor (entoação medida + frames da cara); corte apertado; 1.1x; confirmar com nova transcrição.
 3. Mandar **pré-visualização 1080p** para aprovação.
 4. Final 4K: plate 10-bit + texto ProRes 4444 alpha + áudio separado + versão completa. Verificar margens seguras frame a frame.
+
+## Fluxo com vídeo já cortado e graduado (preferido)
+- Recebo o corte final já graduado (4K, 10-bit, com som). **Não re-codifico o vídeo.**
+- Entrego: texto em **ProRes 4444 com alpha** (mesmos fps do vídeo), áudio (mix final + voz, música e efeitos em separado) e, se houver fundo desfocado, um **clip curto desfocado com alpha** para pôr por cima no tempo indicado.
+- Música: das músicas de fundo na Drive, variar de vídeo para vídeo. Nível: voz -14 LUFS, **música ≈ -32,7 LUFS** (igual ao mix aprovado), a baixar ~3 dB quando falo.

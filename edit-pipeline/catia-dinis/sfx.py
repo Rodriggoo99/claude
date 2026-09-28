@@ -9,14 +9,18 @@ def ending_at(t, snd, pan=0.0): at(t - len(snd) / SR * 0.62, snd, pan)
 
 at(0.34, pop(900, 350, lvl=-25))                                          # "+1 mês"
 ending_at(3.42, whoosh(0.34, 500, 5200, 0.62, lvl=-20)); at(3.42, impact(-12)); at(3.42, thud(-21))   # "0€"
-at(3.62, scribble(0.34, -26), 0.2)                                        # circle
+# counter roll ticks decelerating into the lock on 0
+for j in range(18):                                                      # tick when each digit passes (inverse of the ease-out roll)
+    at(3.00 + 0.42 * (1 - (1 - (j + 1) / 18) ** (1 / 5)), tick(-30 + j * 0.2), 0.1)
 # calendar paper
 at(13.30, whoosh(0.5, 300, 3200, 0.5, lvl=-21), -0.1); at(13.52, paper(0.45, -21))
 at(13.62, paper(0.18, -23), -0.2); at(14.50, paper(0.18, -23), 0.2)
 at(13.78, scribble(0.55, -31), -0.1)                                      # grid
-for i in range(14):
-    at(14.62 + i * 0.13, scribble(0.12, -28 - (i % 3)), -0.5 + i / 13)   # X marks
-at(15.28, scribble(0.24, -27), 0.1); at(16.90, paper(0.18, -24), 0.2)
+for i in range(23):
+    at(14.60 + i * 0.085, scribble(0.09, -29 - (i % 3)), -0.5 + i / 22)  # X marks (lots of meetings)
+at(15.28, scribble(0.24, -27), 0.1)
+for t0, pan in ((16.66, -0.3), (16.90, 0.3), (17.14, -0.2), (17.38, 0.35)):
+    at(t0, paper(0.16, -24), pan)                                        # knowledge strips
 at(18.92, whoosh(0.45, 3800, 450, 0.35, lvl=-24), 0.15); at(18.98, paper(0.35, -24))
 # the rule over the blurred shot
 at(43.62, whoosh(0.62, 350, 4200, 0.45, lvl=-21), -0.15); at(44.46, chime(-29))

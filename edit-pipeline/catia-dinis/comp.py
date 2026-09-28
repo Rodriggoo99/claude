@@ -51,7 +51,7 @@ if __name__ == "__main__" and sys.argv[1] == "preview":
     W, H = 1080, 1920
     ov, out = sys.argv[2], sys.argv[3]
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", FPS_STR, "-i", "-",
-                            "-i", "final_mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "17",
+                            "-i", "final_mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "21",
                             "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart"] + TAGS + [out],
                            stdin=subprocess.PIPE)
     for k, f in enumerate(frames(W, H, fmt="rgb24")):
