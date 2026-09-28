@@ -123,7 +123,7 @@ function shake(t){for(const [t0,a] of SHAKES){const u=t-t0;if(u>=0&&u<0.4){const
 let CAPS=[];
 function buildCaps(){CAPS.forEach(c=>{const d=document.createElement('div');d.className='chunk';d.style.display='none';
   c.E=c.items.map(it=>{const s=document.createElement('span');s.className='it '+it.k+(it.acc?' acc':'');s.textContent=it.k==='serif'?it.text:it.text.toUpperCase();d.appendChild(s);return s});
-  $('cap').appendChild(d);c.el=d;d.style.display='block';c.E.forEach(s=>{if(s.classList.contains('big'))s.style.letterSpacing='.12em';const w=s.scrollWidth;s.style.letterSpacing='';if(w>840)s.style.fontSize=(parseFloat(getComputedStyle(s).fontSize)*840/w)+'px'})  // fit at the widest point of the tracking-in;d.style.display='none'})}
+  $('cap').appendChild(d);c.el=d;d.style.display='block';c.E.forEach(s=>{if(s.classList.contains('big'))s.style.letterSpacing='.12em';const w=s.scrollWidth;s.style.letterSpacing='';if(w>840)s.style.fontSize=(parseFloat(getComputedStyle(s).fontSize)*840/w)+'px'});d.style.display='none'})}
 function renderCaps(t){CAPS.forEach(c=>{const on=t>=c.start-0.08&&t<c.end;c.el.style.display=on?'block':'none';if(!on)return;
   const out=clamp((c.end-t)/0.09);c.el.style.opacity=out;c.el.style.filter=out<1?`blur(${(1-out)*6}px)`:'none';
   c.items.forEach((it,i)=>{const el=c.E[i];
