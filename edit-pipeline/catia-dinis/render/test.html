@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Inter;font-weight:700;src:url(node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2)}
+@font-face{font-family:InterTight;font-weight:800;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2)}
+@font-face{font-family:Serif;font-style:italic;src:url(node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2)}
+html,body{margin:0;width:1080px;height:1920px;background:transparent}
+.c{position:absolute;left:60px;right:120px;text-align:center;transform:translateY(-50%)}
+.l{display:block;font-family:Inter;font-weight:700;font-size:33px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:4px}
+.b{display:block;font-family:InterTight;font-weight:800;font-size:112px;text-transform:uppercase;line-height:.96}
+.s{display:block;font-family:Serif;font-style:italic;font-size:132px;line-height:.92}
+.white{color:#fff;text-shadow:0 2px 22px rgba(0,0,0,.34),0 1px 3px rgba(0,0,0,.3)}
+.ink{color:#15120E}
+</style></head><body><div id="c" class="c"></div>
+<script>
+const q=new URLSearchParams(location.search);const c=document.getElementById('c');
+c.style.top=q.get('y')+'px';c.className='c '+q.get('cls');
+c.innerHTML=`<span class="l">um cliente chegou</span><span class="b" style="color:${q.get('acc')}">à agência</span>`;
+</script></body></html>
