@@ -1,5 +1,7 @@
 # Guia de estilo — vídeos do Rodrigo (Viral Wave Agency)
 
+> **BASE APROVADA (vídeos de marca pessoal em português):** o vídeo "Dizer não a clientes" v2/v3 é o padrão. Todos os vídeos seguem esta base, mas cada um tem de ter **diferenças** nos gráficos e motion graphics — nunca copiar os mesmos elementos.
+
 Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e cinematográfico** — nunca "jogado".
 
 ## Corte
@@ -22,6 +24,16 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 - **Cor de destaque tirada da cena** (no meu escritório: âmbar/dourado do relógio `#F2B24C`); números e palavras-chave nessa cor. Nada de cores aleatórias.
 - Animação subtil: fade + subida curta + desfoque a desaparecer; palavras-herói com "tracking in".
 - **Profundidade:** palavras-herói grandes **atrás de mim** (recorte da silhueta) em momentos-chave (hook, clímax).
+
+## Espaço de cima (acima da cabeça) — aproveitar SEMPRE
+- As legendas ficam ao peito, mas o espaço acima da cabeça (zona segura, ~250–650 px) tem de ter sempre elementos com significado: ícones desenhados à mão, chips/botões de UI, gráficos pequenos, palavras espalhadas, relógios, vistos, etc.
+- Sem invadir a cabeça (a não ser palavras de profundidade, atrás de mim).
+
+## Entradas com impacto
+- Palavras-herói **entram** (arrastadas/deslizadas com rasto de movimento), nunca aparecem já paradas; som de arrasto (whoosh) + impacto + pequeno abanão de câmara ao aterrar.
+
+## Tempo de leitura dos gráficos
+- Cada gráfico/ecrã tem de ficar **completo e parado pelo menos ~0,8–1 s** antes de sair — acelerar as animações de construção em vez de cortar o final.
 
 ## Motion graphics — variar, nunca repetir a mesma fórmula
 Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
