@@ -72,7 +72,7 @@ if __name__ == "__main__" and sys.argv[1] == "final":
     os.makedirs("_work", exist_ok=True)
     # 1) text layer ProRes 4444 + alpha, straight from the PNGs (no video underneath)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", FPS_STR, "-i", f"{ov}/front/f_%05d.png", "-c:v", "prores_ks",
-                    "-profile:v", "4444", "-pix_fmt", "yuva444p10le", "-alpha_bits", "8", "-qscale:v", "7", "-vendor", "apl0"] + TAGS +
+                    "-profile:v", "4444", "-pix_fmt", "yuva444p10le", "-alpha_bits", "8", "-qscale:v", "9", "-vendor", "apl0"] + TAGS +
                    ["_work/texto_legendas_CapCut_ProRes4444.mov"], check=True)
     # 2) blurred segment of his graded shot for the rule (drop it on a track above the video at BLUR[0])
     a, b, c, d = BLUR
