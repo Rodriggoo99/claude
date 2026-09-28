@@ -52,8 +52,9 @@ for t, s in EV:
 mix = voice + fx
 
 music_path = sys.argv[1] if len(sys.argv) > 1 else None
+offset = float(sys.argv[2]) if len(sys.argv) > 2 else 0.0
 if music_path:
-    mu = load(music_path)
+    mu = load(music_path)[int(offset * SR):]
     mu = np.tile(mu, (int(np.ceil(N / len(mu))), 1))[:N] if len(mu) < N else mu[:N]
     # level: ~19 dB under the voice (measured on the approved "Dizer não" mix), gentle ducking under speech
     W = json.load(open("words.json"))
@@ -64,6 +65,11 @@ if music_path:
     speech = env > 0.5
     g = rms(voice[speech]) / rms(mu) * db(-19)
     duck = db(-3) + (1 - db(-3)) * (1 - env)                              # -3 dB more while I speak
+    # leveler: the track builds up later on, never let it get closer than 16 dB to the voice
+    hop = int(0.5 * SR); ceil = rms(voice[speech]) * db(-16)
+    lv = np.array([min(1.0, ceil / (g * rms(mu[i:i + hop]) + 1e-12)) for i in range(0, N, hop)])
+    lv = np.convolve(np.repeat(lv, hop)[:N], np.ones(SR) / SR, "same")
+    duck = duck * lv
     fade = np.minimum(1, np.minimum(np.arange(N) / (0.4 * SR), (N - np.arange(N)) / (1.2 * SR)))
     music = mu * g * (duck * fade)[:, None]
     mix = mix + music
