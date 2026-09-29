@@ -134,7 +134,7 @@ function buildCaps(){CAPS.forEach(c=>{const d=document.createElement('div');d.cl
   c.E=c.items.map(it=>{const s=document.createElement('span');s.className='it '+it.k+(it.acc?' acc':'');const txt=it.k==='serif'?it.text:it.text.toUpperCase();
     if(it.strike!==undefined){s.innerHTML=`<span class="stk">${txt}<i></i></span>`}else s.textContent=txt;d.appendChild(s);return s});
   $('cap').appendChild(d);c.el=d;d.style.display='block';
-  c.E.forEach(s=>{if(s.classList.contains('big'))s.style.letterSpacing='.12em';const w=s.scrollWidth;s.style.letterSpacing='';if(w>840)s.style.fontSize=(parseFloat(getComputedStyle(s).fontSize)*840/w)+'px'});
+  c.E.forEach(s=>{if(s.classList.contains('big'))s.style.letterSpacing='.12em';const w=s.scrollWidth;s.style.letterSpacing='';const mx=s.classList.contains('serif')?820:840;if(w>mx)s.style.fontSize=(parseFloat(getComputedStyle(s).fontSize)*mx/w)+'px'});
   d.style.display='none'})}
 function renderCaps(t){CAPS.forEach(c=>{const on=t>=c.start-0.08&&t<c.end;c.el.style.display=on?'block':'none';if(!on)return;
   const out=clamp((c.end-t)/0.09);c.el.style.opacity=out;c.el.style.filter=out<1?`blur(${(1-out)*6}px)`:'none';
@@ -168,8 +168,8 @@ const PT=[['Corta',16.60],['as',16.90],['pausas',16.98],['e',17.50],['os',17.58]
 function renderPW(t){const g=$('pw');const vis=t>=14.20&&t<21.40;g.style.display=vis?'block':'none';if(!vis)return;
   // folder with the raw takes dropping in
   const f=$('folder'),fin=eo5((t-14.22)/0.3),fto=eio((t-15.62)/0.3);
-  f.style.opacity=clamp((t-14.22)/0.08)*(1-fto);f.style.transform=`translateX(${(1-fin)*-120}px) scale(${(0.9+0.1*fin)*(1-0.55*fto)}) translateY(${fto*-40}px)`;
-  [['c1',14.50],['c2',14.62],['c3',14.74]].forEach(([id,t0],i)=>{const k=eo5((t-t0)/0.26),e=$(id);e.style.opacity=clamp((t-t0)/0.05);e.style.transform=`translateY(${(1-k)*-160}px) rotate(${[-8,3,9][i]*(1-0.6*k)}deg)`});
+  f.style.opacity=clamp((t-14.22)/0.08)*(1-fto);f.style.transform=`translateX(${(1-fin)*-30}px) scale(${(0.9+0.1*fin)*(1-0.55*fto)}) translateY(${fto*-40}px)`;
+  [['c1',14.50],['c2',14.62],['c3',14.74]].forEach(([id,t0],i)=>{const k=eo5((t-t0)/0.26),e=$(id);e.style.opacity=clamp((t-t0)/0.05);e.style.transform=`translateY(${(1-k)*-22}px) rotate(${[-8,3,9][i]*(1-0.6*k)}deg)`});
   // card
   const c=$('card'),cin=eo5((t-15.66)/0.34),cout=eio((t-20.98)/0.3);
   c.style.opacity=clamp((t-15.66)/0.1)*(1-cout);c.style.transform=`translateX(${(1-cin)*-90}px) scale(${0.94+0.06*cin}) translateY(${cout*-160}px)`;c.style.filter=cout>0?`blur(${cout*8}px)`:'none';
