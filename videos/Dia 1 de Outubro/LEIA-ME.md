@@ -7,8 +7,11 @@ Resultado: **49,1 s** à **velocidade original (1.0x)**, voz a **-14 LUFS**. **A
 > Gráficos, zooms e efeitos foram re-sincronizados com a voz.
 
 ## Estado
-- [x] **Pré-visualização 1080p** para aprovação — `Dia 1 de Outubro - PREVIEW 1080p.mp4` (v2, 1.0x; conteúdo aprovado, "o 92 no hook está incrível")
-- [ ] Final 4K (plate 10-bit sem texto + texto ProRes 4444 com alpha + áudio separado + versão completa) — só depois de aprovares
+- [x] **Vídeo completo 1080p** (sem música, 1.0x) — `Dia 1 de Outubro - Completo 1080p.mp4` — conteúdo aprovado ("o 92 no hook está incrível")
+- [ ] **Vídeo completo 4K** — `Dia 1 de Outubro - Completo 4K.mp4` (a renderizar)
+
+A pedido do Rodrigo: **só o vídeo completo** (sem plate/texto/stems separados) e **sem música** — a música entra na app.
+Sugestão de música: **"Time" – Hans Zimmer** (alternativas: "Experience" – Einaudi, "Cornfield Chase" – Zimmer), na app a 10–15 % com o áudio original a 100.
 
 ## Corte
 O vídeo já vinha cortado frase a frase (16 jump cuts, sem frases repetidas nem hesitações), por isso só apertei

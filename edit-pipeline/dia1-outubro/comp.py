@@ -2,6 +2,7 @@
 #   python3 comp.py still  <t_out> <front.png> [back.png] <out.jpg>
 #   python3 comp.py preview <ovdir> <out.mp4>                     1080p H.264 + mix, for approval
 #   python3 comp.py final   <ovdir> <outdir>                      4K: plate 10-bit, text layer (ProRes 4444 alpha), finals
+#   python3 comp.py full    <ovdir> <out.mp4>                     4K complete version only (H.264 + mix)
 import numpy as np, cv2, subprocess, sys, os, json, math
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -197,3 +198,15 @@ if __name__ == "__main__" and sys.argv[1] == "final":
     for e in (e_plate, e_f10, e_264, e_txt):
         e.wait()
     print("final done", [e.returncode for e in (e_plate, e_f10, e_264, e_txt)])
+
+if __name__ == "__main__" and sys.argv[1] == "full":
+    ovdir, out = sys.argv[2], sys.argv[3]; W, H = 2160, 3840
+    enc = subprocess.Popen(raw_in(W, H) + ["-i", os.environ.get("MIX", "/home/user/work/dia1/final_mix.wav"),
+          "-vf", YUV10 + ":sws_dither=bayer,format=yuv420p", "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-tune", "film",
+          "-profile:v", "high", "-level", "5.2", "-g", "120", "-c:a", "aac", "-b:a", "320k", "-shortest", "-movflags", "+faststart"] + TAGS + [out],
+          stdin=subprocess.PIPE)
+    for k, f in out_frames(W, H):
+        M = xform(k / FPS, W, H); plate = warp(f, M, W, H)
+        enc.stdin.write(over(plate, text_layer(k, ovdir, plate, M, W, H)).tobytes())
+        if k % 150 == 0: print("full", k, "/", N_OUT, flush=True)
+    enc.stdin.close(); enc.wait(); print("full done", enc.returncode)
