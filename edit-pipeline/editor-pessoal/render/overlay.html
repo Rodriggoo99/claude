@@ -40,21 +40,23 @@ body.front #back{display:none}
 .strip>div{background:#FBF8F1;padding:14px 34px 12px 30px;font-family:Serif;font-size:58px;line-height:1.05;color:var(--ink);white-space:nowrap}
 #twoH{position:absolute;left:180px;top:450px;font-family:Serif;font-style:italic;font-size:190px;line-height:1;color:var(--ink);white-space:nowrap}
 /* ---- folder + prompt card (he reads the prompt to the side) ---- */
-#pw{position:absolute;inset:0;display:none}
+#pw{position:absolute;inset:0;display:none;overflow:hidden}
+#pwbg{position:absolute;inset:-40px;background:#F2EEE7;background-image:radial-gradient(ellipse 75% 55% at 50% 44%,rgba(255,255,255,.75),rgba(255,255,255,0) 70%),radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 60%,rgba(80,60,35,.20) 100%)}
+#pwk{position:absolute;left:0;right:0;top:560px;text-align:center;font-family:Inter;font-weight:700;font-size:28px;letter-spacing:.38em;color:rgba(28,25,21,.45)}
 .glass{background:rgba(250,247,241,.96);border-radius:30px;box-shadow:0 30px 70px rgba(0,0,0,.28),0 2px 6px rgba(0,0,0,.12)}
-#folder{position:absolute;left:84px;top:690px;width:420px;height:300px;transform-origin:30% 80%}
+#folder{position:absolute;left:330px;top:760px;width:420px;height:300px;transform-origin:30% 80%}
 #folder .tab{position:absolute;left:0;top:0;width:170px;height:46px;border-radius:22px 22px 0 0;background:#E9C27A}
 #folder .body{position:absolute;left:0;top:30px;width:420px;height:270px;border-radius:0 26px 26px 26px;background:linear-gradient(180deg,#F4CF86,#E7B45C);box-shadow:0 26px 60px rgba(0,0,0,.28)}
 #folder .fl{position:absolute;left:28px;bottom:22px;font-family:Inter;font-weight:700;font-size:30px;color:#3A2A12;letter-spacing:.02em}
 .clip{position:absolute;width:150px;height:96px;border-radius:14px;background:#1D1B18;box-shadow:0 10px 24px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center}
 .clip:after{content:"";border-left:26px solid rgba(255,255,255,.9);border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:6px}
-#card{position:absolute;left:66px;top:590px;width:396px;padding:28px 30px 26px 30px;transform-origin:10% 50%}
-#card .hd{display:flex;align-items:center;gap:14px;font-family:Inter;font-weight:600;font-size:26px;color:rgba(28,25,21,.55)}
-#att{display:inline-flex;align-items:center;gap:12px;margin-top:16px;padding:9px 16px 9px 11px;border-radius:16px;background:rgba(28,25,21,.07);font-family:Inter;font-weight:600;font-size:23px;color:rgba(28,25,21,.8)}
+#card{position:absolute;left:120px;top:690px;width:840px;padding:34px 40px 32px 40px;transform-origin:50% 50%}
+#card .hd{display:flex;align-items:center;gap:14px;font-family:Inter;font-weight:600;font-size:28px;color:rgba(28,25,21,.55)}
+#att{display:inline-flex;align-items:center;gap:14px;margin-top:20px;padding:12px 20px 12px 14px;border-radius:18px;background:rgba(28,25,21,.07);font-family:Inter;font-weight:600;font-size:28px;color:rgba(28,25,21,.8)}
 #att b{display:inline-block;width:40px;height:30px;border-radius:7px;background:linear-gradient(180deg,#F4CF86,#E7B45C)}
-#ptxt{margin-top:16px;min-height:250px;padding-right:0;padding-bottom:62px;font-family:Inter;font-weight:500;font-size:35px;line-height:1.3;color:var(--ink)}
+#ptxt{margin-top:20px;min-height:200px;padding-right:0;padding-bottom:78px;font-family:Inter;font-weight:500;font-size:50px;line-height:1.28;letter-spacing:-.005em;color:var(--ink)}
 #caret{display:inline-block;width:3px;height:40px;background:var(--ink);vertical-align:-7px;margin-left:2px}
-#send{position:absolute;right:26px;bottom:24px;width:66px;height:66px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center}
+#send{position:absolute;right:32px;bottom:30px;width:78px;height:78px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center}
 /* ---- CTA: native-style comment ---- */
 #cta{position:absolute;left:120px;right:120px;top:0;height:1920px;display:none}
 #ico{position:absolute;left:50%;top:262px;width:96px;height:96px;margin-left:-48px;filter:drop-shadow(0 4px 16px rgba(0,0,0,.3))}
@@ -69,7 +71,7 @@ body.front #back{display:none}
   <filter id="markerF" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="2"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter>
 </defs></svg>
 <div id="root">
-<div id="back"><div id="ia">IA</div><div id="pwslot"></div></div>
+<div id="back"><div id="ia">IA</div></div>
 <div id="front">
 <!-- paper: "um vídeo destes levava-me 2 horas" + the task list -->
 <div id="gP" class="sheet"><div class="paperbg"></div>
@@ -92,7 +94,7 @@ body.front #back{display:none}
   </div>
 </div>
 <!-- raw takes → folder → prompt -->
-<div id="pw">
+<div id="pw"><div id="pwbg"></div><div id="pwk">O MEU PROCESSO</div>
   <div id="folder"><div class="tab"></div><div class="body"><span class="fl">takes brutos</span></div>
     <div class="clip" id="c1" style="left:40px;top:-40px"></div><div class="clip" id="c2" style="left:140px;top:-54px"></div><div class="clip" id="c3" style="left:240px;top:-36px"></div>
   </div>
@@ -165,14 +167,16 @@ function renderP(t){const g=$('gP');const vis=t>=P.in&&t<P.out+0.32;g.style.disp
 
 // ---- takes → folder → prompt card typed as I read it (14.2 → 21.3)
 const PT=[['Corta',16.60],['as',16.90],['pausas',16.98],['e',17.50],['os',17.58],['erros.',17.70],['Põe',18.08],['legendas',18.26],['no',18.76],['meu',18.84],['estilo,',18.98],['formato',19.42],['vertical,',19.98],['4K.',20.58]];
-function renderPW(t){const g=$('pw');const vis=t>=14.20&&t<21.40;g.style.display=vis?'block':'none';if(!vis)return;
+function renderPW(t){const g=$('pw');const vis=t>=14.12&&t<21.34;g.style.display=vis?'block':'none';if(!vis)return;
+  const gin=eo5((t-14.12)/0.3),gout=eio((t-21.02)/0.3);$('pwbg').style.opacity=1;g.style.opacity=clamp((t-14.12)/0.12);
+  g.style.transform=`translateY(${gout*-1980}px)`;$('pwbg').style.transform=`scale(${1.06-0.06*gin})`;reveal($('pwk'),p(t,14.30,0.3)*(1-eio((t-15.62)/0.2)),10,5);
   // folder with the raw takes dropping in
   const f=$('folder'),fin=eo5((t-14.22)/0.3),fto=eio((t-15.62)/0.3);
-  f.style.opacity=clamp((t-14.22)/0.08)*(1-fto);f.style.transform=`translateX(${(1-fin)*-30}px) scale(${(0.9+0.1*fin)*(1-0.55*fto)}) translateY(${fto*-40}px)`;
+  f.style.opacity=clamp((t-14.22)/0.08)*(1-fto);f.style.transform=`translateY(${(1-fin)*30}px) scale(${(0.9+0.1*fin)*(1-0.55*fto)}) translateY(${fto*-100}px)`;
   [['c1',14.50],['c2',14.62],['c3',14.74]].forEach(([id,t0],i)=>{const k=eo5((t-t0)/0.26),e=$(id);e.style.opacity=clamp((t-t0)/0.05);e.style.transform=`translateY(${(1-k)*-22}px) rotate(${[-8,3,9][i]*(1-0.6*k)}deg)`});
   // card
   const c=$('card'),cin=eo5((t-15.66)/0.34),cout=eio((t-20.98)/0.3);
-  c.style.opacity=clamp((t-15.66)/0.1)*(1-cout);c.style.transform=`translateX(${(1-cin)*-30}px) scale(${0.94+0.06*cin}) translateY(${cout*-120}px)`;c.style.filter=cout>0?`blur(${cout*8}px)`:'none';
+  c.style.opacity=clamp((t-15.66)/0.1)*(1-cout);c.style.transform=`translateY(${(1-cin)*40}px) scale(${0.94+0.06*cin}) translateY(${cout*-120}px)`;c.style.filter=cout>0?`blur(${cout*8}px)`:'none';
   reveal($('att'),p(t,15.84,0.24),10,4);
   let s='';PT.forEach(([w,t0],i)=>{const n=Math.max(0,Math.min(w.length,Math.floor((t-t0)/0.03)+1));if(t>=t0)s+=(s?' ':'')+w.slice(0,n)});
   $('pt').textContent=s;$('caret').style.opacity=(t<20.9&&Math.floor(t*2.2)%2===0)||(t>16.5&&t<20.7&&s.length&&Math.floor(t*6)%3)?1:0;
@@ -186,9 +190,9 @@ function renderCTA(t){const g=$('cta');const vis=t>=25.86&&t<27.05;g.style.displ
   const kp=eo5((t-26.00)/0.26);$('pill').style.opacity=clamp((t-26.0)/0.06);$('pill').style.transform=`translateX(-50%) translateY(${(1-kp)*30}px) scale(${0.92+0.08*kp})`;
   const W='conteúdo';const n=Math.max(0,Math.min(W.length,Math.floor((t-26.30)/0.04)+1));$('pc').textContent=t<26.30?'':W.slice(0,n)}
 
-window.setup=(caps)=>{CAPS=caps;buildCaps();buildP();tearClip($('p1'),5);$('pwslot').appendChild($('pw'))};
+window.setup=(caps)=>{CAPS=caps;buildCaps();buildP();tearClip($('p1'),5)};
 window.render=(t,layer)=>{document.body.className=layer;const [dx,dy]=shake(t);$('root').style.transform=`translate(${dx}px,${dy}px)`;
-  if(layer==='back'){renderPW(t);return renderIA(t)>0||(t>=14.20&&t<21.40)}
-  renderP(t);renderCTA(t);renderCaps(t);return true};
+  if(layer==='back')return renderIA(t)>0;
+  renderP(t);renderPW(t);renderCTA(t);renderCaps(t);return true};
 </script>
 </body></html>
