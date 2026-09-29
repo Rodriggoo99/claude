@@ -25,6 +25,15 @@ body.front #back{display:none}
 .acc{color:var(--amber)}
 .stk{position:relative;display:inline-block}
 .stk i{position:absolute;left:-8px;top:52%;height:4px;background:var(--amber);border-radius:4px;width:0}
+/* ---- "inteligência artificial" title (replaces the giant IA) ---- */
+#ai{position:absolute;left:120px;right:120px;top:0;height:1920px;display:none;text-align:center}
+#aiL{position:absolute;left:0;right:0;top:282px}
+.ail{position:absolute;left:0;right:0;font-family:Serif;font-style:italic;font-size:150px;line-height:1;white-space:nowrap;text-shadow:0 3px 26px rgba(0,0,0,.28)}
+#ai1{top:330px;color:#F7F1E8}#ai2{top:470px;color:var(--amber)}
+.ail span{display:inline-block;will-change:transform,opacity,filter}
+.ail .sh{position:absolute;inset:0;pointer-events:none;color:transparent;text-shadow:none;
+  background:linear-gradient(100deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.95) 50%,rgba(255,255,255,0) 60%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text}
+#spark{position:absolute;width:64px;height:64px;filter:drop-shadow(0 0 14px rgba(242,178,76,.8))}
 /* ---- giant IA behind me ---- */
 #ia{position:absolute;left:0;width:1080px;top:350px;text-align:center;font-family:InterTight;font-weight:900;font-size:580px;line-height:1;letter-spacing:-.02em;color:var(--amber);text-shadow:0 10px 40px rgba(0,0,0,.18);display:none}
 /* ---- editorial paper ---- */
@@ -110,6 +119,10 @@ body.front #back{display:none}
   <svg id="ico" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"><path d="M20.66 16.4A9.5 9.5 0 1 0 17.3 20l3.7 1-1.1-3.5z"/></svg>
   <div id="pill" class="glass"><div id="av">R</div><div><span id="pu">comenta</span><span id="pc"></span></div></div>
 </div>
+<div id="ai"><span id="aiL" class="it label">por</span>
+  <div id="ai1" class="ail"></div><div id="ai2" class="ail"></div>
+  <svg id="spark" viewBox="0 0 24 24"><path d="M12 1 C 12.9 8, 16 11.1, 23 12 C 16 12.9, 12.9 16, 12 23 C 11.1 16, 8 12.9, 1 12 C 8 11.1, 11.1 8, 12 1 Z" fill="#F2B24C"/></svg>
+</div>
 <div id="cap"></div>
 </div>
 </div>
@@ -190,9 +203,21 @@ function renderCTA(t){const g=$('cta');const vis=t>=25.86&&t<27.05;g.style.displ
   const kp=eo5((t-26.00)/0.26);$('pill').style.opacity=clamp((t-26.0)/0.06);$('pill').style.transform=`translateX(-50%) translateY(${(1-kp)*30}px) scale(${0.92+0.08*kp})`;
   const W='conteúdo';const n=Math.max(0,Math.min(W.length,Math.floor((t-26.30)/0.04)+1));$('pc').textContent=t<26.30?'':W.slice(0,n)}
 
-window.setup=(caps)=>{CAPS=caps;buildCaps();buildP();tearClip($('p1'),5)};
+function buildAI(){[['ai1','inteligência'],['ai2','artificial']].forEach(([id,w])=>{const d=$(id);
+  d.innerHTML=w.split('').map(c=>`<span>${c}</span>`).join('')+`<div class="sh">${w}</div>`});
+  const g=$('ai');g.style.display='block';const b=$('ai2').querySelector('span:last-of-type').getBoundingClientRect();
+  $('spark').style.left=(b.right-120+14)+'px';$('spark').style.top=(b.top-34)+'px';g.style.display='none'}
+function renderAI(t){const g=$('ai');const t0=2.08,t1=3.12;const vis=t>=t0-0.02&&t<t1+0.26;g.style.display=vis?'block':'none';if(!vis)return;
+  const out=1-eio((t-t1)/0.24);g.style.opacity=out;g.style.filter=out<1?`blur(${(1-out)*8}px)`:'none';
+  reveal($('aiL'),p(t,t0,0.2),10,5);
+  [['ai1',2.16,0.022],['ai2',2.62,0.03]].forEach(([id,s0,st])=>{[...$(id).querySelectorAll('span')].forEach((e,i)=>{const k=eo5((t-s0-i*st)/0.34);
+    e.style.opacity=k;e.style.transform=`translateY(${(1-k)*34}px) scale(${0.9+0.1*k})`;e.style.filter=k<1?`blur(${(1-k)*12}px)`:'none'});
+    const sh=$(id).querySelector('.sh'),u=clamp((t-s0-0.28)/0.55);sh.style.backgroundPosition=`${100-u*100}% 0`;sh.style.opacity=u>0&&u<1?1:0});
+  const ks=eo5((t-2.98)/0.24),tw=1+0.25*Math.sin(Math.PI*clamp((t-2.98)/0.3));$('spark').style.opacity=clamp((t-2.98)/0.06);
+  $('spark').style.transform=`rotate(${(1-ks)*-90}deg) scale(${(0.3+0.7*ks)*tw})`}
+window.setup=(caps)=>{CAPS=caps;buildCaps();buildP();buildAI();tearClip($('p1'),5)};
 window.render=(t,layer)=>{document.body.className=layer;const [dx,dy]=shake(t);$('root').style.transform=`translate(${dx}px,${dy}px)`;
-  if(layer==='back')return renderIA(t)>0;
-  renderP(t);renderPW(t);renderCTA(t);renderCaps(t);return true};
+  if(layer==='back')return false;
+  renderAI(t);renderP(t);renderPW(t);renderCTA(t);renderCaps(t);return true};
 </script>
 </body></html>

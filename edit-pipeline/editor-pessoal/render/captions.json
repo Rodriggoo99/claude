@@ -1,7 +1,6 @@
 [
  {"start": 0.0, "end": 0.98, "items": [{"t": 0.0, "k": "label", "text": "este vídeo que"}, {"t": 0.4, "k": "big", "text": "estás a ver"}]},
  {"start": 0.98, "end": 2.08, "items": [{"t": 0.86, "k": "label", "text": "foi completamente"}, {"t": 1.4, "k": "big", "text": "editado"}]},
- {"start": 2.08, "end": 3.2, "items": [{"t": 2.08, "k": "label", "text": "por inteligência artificial"}], "top": 296},
  {"start": 3.2, "end": 4.8, "items": [{"t": 3.22, "k": "label", "text": "e eu só escrevi"}, {"t": 3.96, "k": "big", "text": "uma frase", "acc": true}]},
  {"start": 13.2, "end": 14.2, "items": [{"t": 13.24, "k": "label", "text": "eu agora"}, {"t": 13.54, "k": "big", "text": "faço assim"}]},
  {"start": 21.6, "end": 22.0, "items": [{"t": 21.6, "k": "label", "text": "e a verdade"}, {"t": 21.72, "k": "big", "text": "é que"}]},
