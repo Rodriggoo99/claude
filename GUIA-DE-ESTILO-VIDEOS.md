@@ -19,6 +19,8 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 
 ## Legendas (inspiração: Jack Mason, Bradford Marais)
 - **1 a 3 palavras de cada vez**, à altura do peito (sobre a roupa, alto contraste), não sempre no mesmo sítio fixo em cima.
+- **Roupa clara (t-shirt branca):** legendas **em cima, sobre a parede** (branco + âmbar), nunca em cima da t-shirt. Na dúvida, fazer um print de teste e mandar.
+- **Centrar no meio do ecrã (x = 540)** com **120 px de margem dos dois lados** (máx. 840 px de largura) — não centrar entre as margens assimétricas, fica puxado para a esquerda.
 - **Hierarquia de duas escalas:** etiqueta pequena (Inter Bold, maiúsculas, espaçada) + palavra grande (condensada bold, maiúsculas, tracking apertado).
 - **Itálico serifado** (Instrument Serif) para palavras emocionais/elegantes, em minúsculas.
 - **Cor de destaque tirada da cena** (no meu escritório: âmbar/dourado do relógio `#F2B24C`); números e palavras-chave nessa cor. Nada de cores aleatórias.
@@ -39,13 +41,25 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
 | Situação | Recurso |
 |---|---|
-| Hook / clímax | Palavra gigante atrás de mim (profundidade) + impacto sonoro |
+| Hook / clímax | Palavra gigante atrás de mim (profundidade) + impacto sonoro — **não usar sempre no hook, variar** |
 | Lista, passos, "antes vs depois", números | **Ecrã editorial**: papel quadriculado creme, tiras de papel rasgado com texto serifado, marcador âmbar e gráficos desenhados à mão |
-| Citação / frase marcante | **Citação cinematográfica**: fundo desfocado e escurecido, texto serifado grande, riscos/círculos desenhados à mão |
+| Citação / frase marcante | **Citação cinematográfica**: o **meu próprio plano** por trás, desfocado e escurecido (nunca um fundo de cor), texto serifado grande, riscos/círculos desenhados à mão |
 | Mostrar exemplos de conteúdo/produtos | Ecrã claro (off-white) com mockups de telemóvel e sombra suave |
-| Repetição/ênfase ("mais vezes não") | Palavras espalhadas na cena, várias escalas e opacidades |
+| Repetição/ênfase ("mais vezes não") | Palavras espalhadas na cena (**esporádico, 3–4 no máximo**), várias escalas e opacidades, **sempre atrás de mim** |
 | CTA "guarda/comenta" | Ícone nativo do Instagram animado (guardar, comentário) |
-- **Evitar:** o mesmo ecrã azul-escuro com tabelas/cartões em todos os vídeos.
+- **Nunca** ecrãs azul-escuro com tabelas/cartões/UI — "vê-se que é AI". Tudo **cinematográfico e clean**.
+- **Nada à frente da minha cara.** Qualquer palavra/elemento que se cruze com a cabeça vai para trás de mim (recorte da silhueta).
+- Gráficos de números (ex.: mais clientes ↑ vs faturação ↓) = **gráfico desenhado à mão** no ecrã editorial (tinta preta + marcador âmbar, círculo à mão no ponto-chave).
+
+## Referências (cortes, legendas, motion)
+- https://www.instagram.com/reel/DXT4_AUJGGm/ — ecrã editorial (papel quadriculado, tiras rasgadas, gráfico à mão), legendas pequenas bold + itálico
+- https://www.instagram.com/reel/DRpAdkyETBs/ — legendas 1–3 palavras ao peito, palavras atrás do sujeito, look cinematográfico
+- https://www.instagram.com/reel/DBqaWrLttT_/ — legenda simples ao peito, 1 palavra de cada vez, âmbar só em números
 
 ## Som
 - Voz a **-14 LUFS**. Efeitos discretos por baixo da voz (whooshes nas transições, papel a deslizar, marcador a riscar, impacto nas palavras-herói). Sem música sem licença.
+
+## Fluxo com vídeo já cortado e graduado (preferido)
+- Recebo o corte final já graduado (4K, 10-bit, com som). **Não re-codifico o vídeo.**
+- Entrego: texto em **ProRes 4444 com alpha** (mesmos fps do vídeo), áudio (mix final + voz, música e efeitos em separado) e, se houver fundo desfocado, um **clip curto desfocado com alpha** para pôr por cima no tempo indicado.
+- Música: das músicas de fundo na Drive, variar de vídeo para vídeo. Nível: voz -14 LUFS, **música ≈ -32,7 LUFS** (igual ao mix aprovado), a baixar ~3 dB quando falo.
