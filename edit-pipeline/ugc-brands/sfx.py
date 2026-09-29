@@ -1,11 +1,10 @@
 # Sound design for the UGC (EN) edit, on the 1.0x timeline (Rodrigo's cut already runs at 1.1x).
-# Voice = audio_match.py output (takes matched in tone + level, -14 LUFS); synthesised SFX mixed discreetly underneath
-# -> final_mix.wav, voice.wav, sfx_only.wav
+# Synthesised SFX mixed discreetly under Rodrigo's untouched voice -> final_mix.wav, voice.wav, sfx_only.wav
 import numpy as np, subprocess, sys
 import pyloudnorm as pyln
 from sfx_lib import *
 
-SRC = sys.argv[1] if len(sys.argv) > 1 else "voice_matched.wav"
+SRC = sys.argv[1] if len(sys.argv) > 1 else "/home/user/work/ugc1/video.mp4"
 EV = []
 def at(t, snd, pan=0.0): EV.append((t, mono_to_st(snd, pan)))
 def ending_at(t, snd, pan=0.0): at(t - len(snd) / SR * 0.62, snd, pan)
@@ -30,8 +29,7 @@ ending_at(5.43 + 0.22, whoosh(0.28, 700, 4500, 0.62, lvl=-30), -0.15)
 at(6.28, whoosh(0.5, 350, 4000, 0.5, lvl=-22), -0.1); at(6.62, thud(-25))
 at(6.86, whoosh(0.45, 300, 1800, 0.8, 0.9, lvl=-30))                       # zoom into followers
 at(7.39, scribble(0.36, -28), 0.15)                                        # marker ring
-ending_at(7.44 + 0.22, whoosh(0.28, 700, 4500, 0.62, lvl=-26)); at(7.72, pop(1100, 450, lvl=-24))   # 1K
-ending_at(7.74 + 0.22, whoosh(0.26, 700, 4500, 0.62, lvl=-30), -0.1)     # FOLLOWERS
+at(7.60, pop(1300, 520, lvl=-22), 0.25)                                    # <1K FOLLOWERS chip
 at(8.78, whoosh(0.4, 3600, 450, 0.35, lvl=-27))                            # card out
 # --- UGC / audience / quality / content
 ending_at(8.95 + 0.22, whoosh(0.26, 800, 4800, 0.62, lvl=-30))
@@ -39,7 +37,6 @@ ending_at(10.58 + 0.22, whoosh(0.3, 600, 4800, 0.62, lvl=-27))
 at(10.98, whoosh(0.22, 1800, 6500, 0.5, 1.2, lvl=-27), -0.2)               # strike AUDIENCE
 ending_at(12.10 + 0.30, whoosh(0.42, 300, 5200, 0.7, lvl=-21), 0.2)        # QUALITY dragged in behind the head
 at(12.40, impact(-12))
-ending_at(12.80 + 0.22, whoosh(0.28, 700, 4500, 0.62, lvl=-29), -0.1)      # CONTENT
 ending_at(14.45 + 0.22, whoosh(0.3, 600, 4800, 0.62, lvl=-26))             # 3 THINGS
 # --- brief card
 at(15.20, whoosh(0.5, 350, 4000, 0.5, lvl=-23), 0.1); at(15.52, thud(-26))
@@ -57,20 +54,27 @@ at(23.91, whoosh(0.22, 1800, 6500, 0.5, 1.2, lvl=-27), 0.2)
 at(24.20, whoosh(0.35, 500, 3500, 0.5, lvl=-27)); at(24.49, pop(1200, 500, lvl=-21)); at(24.56, chime(-29))
 at(25.56, shutter(-25))                                                    # hand hits the lens
 
-raw = subprocess.run(["ffmpeg", "-v", "error", "-i", SRC, "-vn", "-af", "aresample=48000:resampler=soxr:precision=28",
-                      "-f", "f32le", "-ac", "2", "-"], capture_output=True).stdout
-voice = np.frombuffer(raw, np.float32).reshape(-1, 2).astype(np.float64)
-lufs = pyln.Meter(SR).integrated_loudness(voice)
-voice *= db(-14 - lufs)
-print(f"voice {lufs:.2f} LUFS -> -14")
-fx = np.zeros_like(voice)
-for t, s in EV:
-    i = int(t * SR); n = min(len(s), len(fx) - i)
-    if n > 0: fx[i:i + n] += s[:n]
+# Voice = Rodrigo's audio exactly as sent: native 44.1 kHz, no speed change, no EQ, no gain, no limiter.
+# Only the synthesised SFX are resampled (48k -> 44.1k) and summed underneath.
+from scipy.signal import resample_poly
+probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a:0", "-show_entries", "stream=sample_rate,channels",
+                        "-of", "csv=p=0", SRC], capture_output=True, text=True).stdout.strip().split(",")
+VSR, VCH = int(probe[0]), int(probe[1])
+raw = subprocess.run(["ffmpeg", "-v", "error", "-i", SRC, "-vn", "-f", "f32le", "-"], capture_output=True).stdout
+voice = np.frombuffer(raw, np.float32).reshape(-1, VCH).astype(np.float64)
+if VCH == 1: voice = np.repeat(voice, 2, 1)
+print(f"voice {VSR} Hz, {pyln.Meter(VSR).integrated_loudness(voice):.2f} LUFS (untouched)")
+fx48 = np.zeros((int(len(voice) / VSR * SR) + SR, 2))
+for t, snd in EV:
+    i = int(t * SR); n = min(len(snd), len(fx48) - i)
+    if n > 0: fx48[i:i + n] += snd[:n]
+g = np.gcd(VSR, SR)
+fx = resample_poly(fx48, VSR // g, SR // g, axis=0)[:len(voice)]
 mix = voice + fx
-print("peaks dB: voice %.1f, sfx %.1f, mix %.1f" % tuple(20 * np.log10(np.abs(a).max()) for a in (voice, fx, mix)))
+pk = lambda a: 20 * np.log10(np.abs(a).max() + 1e-12)
+print("peaks dBFS: voice %.2f, sfx %.2f, mix %.2f" % (pk(voice), pk(fx), pk(mix)))
+assert np.abs(mix).max() < 0.999, "mix would clip - lower the SFX, never touch the voice"
 for name, sig in (("final_mix.wav", mix), ("voice.wav", voice), ("sfx_only.wav", fx)):
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f64le", "-ar", str(SR), "-ac", "2", "-i", "-",
-                    "-af", "alimiter=limit=0.89:attack=2:release=60:level=false", "-c:a", "pcm_s24le", name],
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f64le", "-ar", str(VSR), "-ac", "2", "-i", "-", "-c:a", "pcm_s24le", name],
                    input=sig.tobytes(), check=True)
-print("events", len(EV), "mix LUFS %.2f" % pyln.Meter(SR).integrated_loudness(mix))
+print("events", len(EV), "mix LUFS %.2f" % pyln.Meter(VSR).integrated_loudness(mix))

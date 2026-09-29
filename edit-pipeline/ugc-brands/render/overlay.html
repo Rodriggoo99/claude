@@ -31,12 +31,14 @@ html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hi
   box-shadow:0 2px 10px rgba(58,34,22,.35)}
 .tail{margin-top:12px;margin-bottom:0}
 /* ---------- IG card ---------- */
-#ig{position:absolute;left:120px;top:1030px;width:840px;display:none}
+#ig{position:absolute;left:120px;top:270px;width:840px;display:none}
 #igCard{position:relative;width:840px;height:356px;border-radius:34px;overflow:hidden;background:#fff;
   box-shadow:0 40px 90px rgba(40,24,14,.30),0 8px 24px rgba(40,24,14,.16)}
 #igZ{position:absolute;left:0;top:0;width:840px;transform-origin:501px 132px}
 #igZ img{display:block;width:100%}
 #igRing{position:absolute;left:0;top:0;width:100%;height:100%}
+#igChip{position:absolute;right:18px;bottom:-30px;background:var(--terra);color:var(--cream);font-family:Mono;font-weight:800;font-size:28px;
+  letter-spacing:.04em;padding:14px 22px 13px;border-radius:40px;box-shadow:0 10px 30px rgba(120,50,20,.35)}
 /* ---------- glass ---------- */
 .gl{position:absolute;display:none}
 .gbg{position:absolute;inset:0;border-radius:38px;background:var(--glass);border:1.5px solid rgba(255,255,255,.85);
@@ -66,8 +68,10 @@ html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hi
 #save .st{font-family:Archivo;font-stretch:125%;font-weight:850;font-size:62px;letter-spacing:-.015em;color:var(--espresso);line-height:1}
 #save .sl{font-family:Mono;font-weight:800;font-size:27px;letter-spacing:.08em;color:var(--esp2);margin-top:8px}
 /* depth word (behind the head) */
-#depth{position:absolute;left:60px;width:900px;top:583px;padding:20px 0;overflow:hidden;text-align:center;display:none}
-#depth .hero{font-size:150px;font-stretch:125%;font-weight:900;letter-spacing:-.03em;color:var(--terra)}
+#depth{position:absolute;left:120px;width:840px;top:545px;padding:20px 0;overflow:hidden;text-align:center;display:none}
+#depth .hero{font-size:141px;font-stretch:125%;font-weight:900;letter-spacing:-.03em;color:transparent;
+  background:linear-gradient(180deg,#FFF4E6 0%,#FFD9BF 55%,#FFB78E 100%);-webkit-background-clip:text;background-clip:text}
+body.alt #depth .hero{background:none;color:var(--terra);-webkit-text-stroke:0}
 /* render modes */
 body.mask #root *{visibility:hidden}
 body.mask .gbg{visibility:visible!important;background:#fff!important;border-color:transparent!important;box-shadow:none!important}
@@ -85,6 +89,7 @@ body.depth #root>*:not(#depth){visibility:hidden}
       <svg id="igRing" viewBox="0 0 1206 593"><path id="igPath" fill="none" stroke="#E0784F" stroke-width="9" stroke-linecap="round"
         d="M905 196 C 906 150, 810 146, 752 148 C 690 150, 652 170, 652 214 C 652 262, 720 282, 800 280 C 880 278, 922 252, 914 208 C 908 180, 870 162, 830 158"/></svg>
     </div></div>
+    <div id="igChip">&lt;1K FOLLOWERS</div>
   </div>
 
   <div id="brief" class="gl"><div class="gbg"></div><div class="gin">
@@ -113,7 +118,7 @@ function mblur(el){const id='mb'+(nf++);const f=document.createElementNS('http:/
   f.setAttribute('id',id);f.setAttribute('x','-50%');f.setAttribute('width','200%');
   f.innerHTML='<feGaussianBlur stdDeviation="0 0"/>';$('defs').appendChild(f);el._g=f.firstChild;el._fid=id;}
 // motion blur (SVG, directional) chained with the warm soft shadow
-function setBlur(el,sx,sy=0){const sh=el._noShadow?'':SHADOW;
+function setBlur(el,sx,sy=0){const sh=el._noShadow?'':(el._shadow||SHADOW);
   if(sx<0.3&&sy<0.3){el.style.filter=sh||'none';return}
   el._g.setAttribute('stdDeviation',`${sx.toFixed(1)} ${sy.toFixed(1)}`);el.style.filter=`url(#${el._fid}) ${sh}`}
 // hero word dragged in from the side with a directional motion blur
@@ -143,11 +148,10 @@ const CAPS=[
  {s:3.15,e:4.18,items:[{k:'label',text:'They want',t:3.15},{k:'hero',text:'THIS.',t:3.52,dir:-1,size:150,sweep:3.80}]},
  {s:4.18,e:5.15,items:[{k:'label',text:'I worked with some of the',t:4.18,cps:44}]},
  {s:5.15,e:6.30,items:[{k:'hero',text:'BIGGEST',t:5.17},{k:'hero',text:'BRANDS',t:5.43,dir:-1},{k:'label',text:'in the world',t:5.79,tail:1}]},
- {s:6.32,e:8.80,items:[{k:'label',text:'and I had less than',t:6.34,cps:40},{k:'hero',text:'<span class="acc">1K</span>',t:7.44,size:118},{k:'hero',text:'FOLLOWERS',t:7.74,dir:-1,size:84}]},
  {s:8.91,e:9.42,items:[{k:'label',text:'Because in',t:8.91},{k:'hero',text:'UGC,',t:8.95}]},
  {s:9.42,e:11.29,items:[{k:'label',text:'The brand is',t:9.42,cps:40},{k:'hero',text:'NOT BUYING',t:9.96,size:84},{k:'hero',text:'AUDIENCE',t:10.58,outline:1,strike:10.98,size:84,dir:-1}]},
  {s:11.31,e:12.43,items:[{k:'label',text:"They're buying the",t:11.31,cps:40}]},
- {s:12.43,e:13.49,items:[{k:'label',text:'of your',t:12.43},{k:'hero',text:'CONTENT.',t:12.80,dir:-1,size:80}]},
+ {s:12.43,e:13.49,items:[{k:'label',text:'of your content.',t:12.43,cps:30}]},
  {s:13.51,e:22.24,items:[{k:'label',text:'And brands just want',t:13.51,cps:42},{k:'hero',text:'<span class="acc">3</span> THINGS',t:14.45}]},
  {s:22.29,e:23.19,items:[{k:'label',text:'So yes, brands',t:22.29,cps:44},{k:'hero',text:"DON'T CARE",t:22.66,size:88,sweep:22.96}]},
  {s:23.21,e:24.20,items:[{k:'label',text:'about your',t:23.21},{k:'hero',text:'FOLLOWERS',t:23.58,dir:-1,strike:23.91}]},
@@ -180,17 +184,18 @@ function renderCaps(t){
 }
 
 // ---------------- IG profile card (real screenshot) ----------------
-const IG={in:6.36,zoom:6.86,ring:7.39,out:8.80};
+const IG={in:6.36,zoom:6.86,ring:7.39,chip:7.60,out:8.80};
 function renderIG(t){
   const g=$('ig'),vis=t>=IG.in&&t<IG.out+0.22;g.style.display=vis?'block':'none';if(!vis)return;
   const u=p(t,IG.in,0.42),k=back(u),ko=eio(p(t,IG.out,0.2));
-  const y=(1-k)*50+ko*30, r=(1-k)*-4, s=0.9+0.1*Math.min(k,1.0);
+  const y=(1-k)*30-ko*20, r=(1-k)*-3, s=0.9+0.1*Math.min(k,1.0);
   g.style.transform=`translateY(${y}px) rotate(${r}deg) scale(${s})`;g.style.opacity=clamp(u*3)*(1-ko);
   if(!g._f){mblur(g);g._f=1;g._noShadow=1}
   setBlur(g,0,Math.max(u<0.45?(0.45-u)*40:0,ko*14));
   const zk=eio(p(t,IG.zoom,0.42));$('igZ').style.transform=`scale(${1+0.42*zk})`;$('igCard').style.height=(356-78*zk)+'px';
   const path=$('igPath'),L=path._L||(path._L=path.getTotalLength());const rk=eio(p(t,IG.ring,0.34));
   path.style.strokeDasharray=L;path.style.strokeDashoffset=L*(1-rk);path.style.opacity=rk>0?1:0;
+  const c=$('igChip'),ck=back(p(t,IG.chip,0.3));c.style.opacity=clamp(p(t,IG.chip,0.08));c.style.transform=`rotate(-4deg) scale(${0.4+0.6*ck})`;
 }
 
 // ---------------- glass brief card ----------------
@@ -243,13 +248,13 @@ function renderSave(t){
 const DP={in:12.10,out:13.46};
 function renderDepth(t){
   const d=$('depth'),vis=t>=DP.in&&t<DP.out+0.12;d.style.display=vis?'block':'none';if(!vis)return;
-  const w=$('dW');if(!w._fid){mblur(w);w._noShadow=0}drag(w,t,DP.in,-1,420);
+  const w=$('dW');if(!w._fid){mblur(w);w._shadow='drop-shadow(0 8px 30px rgba(58,34,22,.55)) drop-shadow(0 2px 5px rgba(58,34,22,.5))'}drag(w,t,DP.in,-1,380);
   d.style.opacity=1-eo(p(t,DP.out,0.12));
 }
 
 window.setup=()=>{buildCaps();buildBrief();};
 window.render=(t,mode='front',shake=[0,0])=>{
-  document.body.className=mode;
+  document.body.className=mode+(window.ALT?' alt':'');
   $('root').style.transform=`translate(${shake[0]}px,${shake[1]}px)`;
   renderCaps(t);renderIG(t);renderBrief(t);renderSave(t);renderDepth(t);
 };

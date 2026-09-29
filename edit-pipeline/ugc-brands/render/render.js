@@ -8,7 +8,7 @@ const FPS = 60;
 
 async function worker(browser, scale, mode, frames, outdir, shake) {
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: scale });
-  await page.goto('file://' + path.resolve(__dirname, 'overlay.html'));
+  await page.goto('file://' + path.resolve(__dirname, process.env.OVERLAY || 'overlay.html'));
   await page.evaluate(() => document.fonts.ready);
   await page.evaluate(() => window.setup());
   for (const [name, t] of frames) {

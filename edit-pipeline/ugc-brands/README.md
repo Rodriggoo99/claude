@@ -10,9 +10,8 @@ node render/render.js <ov>/mask  mask  1 frames 913 1352 2   # vidro fosco (brie
 node render/render.js <ov>/mask  mask  1 frames 1452 1532 2  # vidro fosco (save)
 node render/render.js <ov>/depth depth 1 frames 725 818 2    # QUALITY atrás da cabeça
 python3 matte.py dump <plates> && python3 matte.py infer <plates> <ov>/matte
-python3 audio_match.py <src> voice_matched.wav    # igualar tom + volume take a take (-14 LUFS)
-python3 sfx.py voice_matched.wav                 # final_mix.wav, voice.wav, sfx_only.wav
+python3 sfx.py <src.mp4>                         # final_mix.wav, voice.wav (= áudio original, intocado), sfx_only.wav
 python3 comp.py run 1 <ov> <out>/                # pré-visualização 1080p
 python3 comp.py run 2 <ov4k> <out>/              # final 4K: plate 10-bit + final 10-bit + H.264
 ```
-Setup: `cd render && npm i playwright@1.56 @fontsource-variable/archivo @fontsource/jetbrains-mono`; `pip install opencv-python-headless onnxruntime rembg pyloudnorm scipy soundfile` (o modelo BiRefNet-portrait vem do rembg).
+Setup: `cd render && npm i playwright@1.56 @fontsource-variable/archivo @fontsource/jetbrains-mono`; `pip install opencv-python-headless onnxruntime rembg pyloudnorm scipy` (o modelo BiRefNet-portrait vem do rembg).
