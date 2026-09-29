@@ -248,7 +248,7 @@ function renderSave(t){
 const DP={in:12.10,out:13.46};
 function renderDepth(t){
   const d=$('depth'),vis=t>=DP.in&&t<DP.out+0.12;d.style.display=vis?'block':'none';if(!vis)return;
-  const w=$('dW');if(!w._fid){mblur(w);w._shadow='drop-shadow(0 8px 30px rgba(58,34,22,.55)) drop-shadow(0 2px 5px rgba(58,34,22,.5))'}drag(w,t,DP.in,-1,380);
+  const w=$('dW');if(!w._fid){mblur(w);w._noShadow=1}drag(w,t,DP.in,-1,380);   // no shadow on the depth word (Rodrigo)
   d.style.opacity=1-eo(p(t,DP.out,0.12));
 }
 

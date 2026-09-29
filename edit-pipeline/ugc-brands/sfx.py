@@ -54,7 +54,8 @@ at(23.91, whoosh(0.22, 1800, 6500, 0.5, 1.2, lvl=-27), 0.2)
 at(24.20, whoosh(0.35, 500, 3500, 0.5, lvl=-27)); at(24.49, pop(1200, 500, lvl=-21)); at(24.56, chime(-29))
 at(25.56, shutter(-25))                                                    # hand hits the lens
 
-# Voice = Rodrigo's audio exactly as sent: native 44.1 kHz, no speed change, no EQ, no gain, no limiter.
+# Voice = Rodrigo's audio as sent: native 44.1 kHz, no speed change, no EQ / compression / limiter —
+# only one flat gain so the file sits at -14 LUFS.
 # Only the synthesised SFX are resampled (48k -> 44.1k) and summed underneath.
 from scipy.signal import resample_poly
 probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a:0", "-show_entries", "stream=sample_rate,channels",
@@ -63,7 +64,10 @@ VSR, VCH = int(probe[0]), int(probe[1])
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", SRC, "-vn", "-f", "f32le", "-"], capture_output=True).stdout
 voice = np.frombuffer(raw, np.float32).reshape(-1, VCH).astype(np.float64)
 if VCH == 1: voice = np.repeat(voice, 2, 1)
-print(f"voice {VSR} Hz, {pyln.Meter(VSR).integrated_loudness(voice):.2f} LUFS (untouched)")
+L0 = pyln.Meter(VSR).integrated_loudness(voice)
+GAIN_DB = -14 - L0                     # one flat gain for the whole file (no EQ / compression / limiting)
+voice *= 10 ** (GAIN_DB / 20)
+print(f"voice {VSR} Hz, {L0:.2f} LUFS -> flat {GAIN_DB:+.2f} dB -> -14 LUFS")
 fx48 = np.zeros((int(len(voice) / VSR * SR) + SR, 2))
 for t, snd in EV:
     i = int(t * SR); n = min(len(snd), len(fx48) - i)
