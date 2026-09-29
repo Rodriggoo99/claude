@@ -27,7 +27,7 @@ PT = [("Corta", 16.60), ("as", 16.90), ("pausas", 16.98), ("e", 17.50), ("os", 1
 for w, t0 in PT:
     for c in range(len(w)):
         at(t0 + c * 0.03, tick(-34 - (c % 3)), -0.35)                     # soft key clicks
-at(20.94, pop(1300, 520, lvl=-22), -0.3); at(21.00, whoosh(0.4, 900, 5000, 0.5, lvl=-25), -0.2)
+at(20.94, pop(1300, 520, lvl=-22), -0.3); at(21.06, whoosh(0.4, 900, 5000, 0.5, lvl=-25), -0.2); at(21.36, whoosh(0.45, 3800, 450, 0.35, lvl=-24), 0.15)
 # 2 horas → 10 minutos
 at(22.06, scribble(0.2, -27)); at(22.04, thud(-24))
 # CTA

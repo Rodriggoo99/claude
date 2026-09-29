@@ -4,7 +4,7 @@
  {"start": 2.08, "end": 3.2, "items": [{"t": 2.08, "k": "label", "text": "por inteligência artificial"}], "top": 296},
  {"start": 3.2, "end": 4.8, "items": [{"t": 3.22, "k": "label", "text": "e eu só escrevi"}, {"t": 3.96, "k": "big", "text": "uma frase", "acc": true}]},
  {"start": 13.2, "end": 14.2, "items": [{"t": 13.24, "k": "label", "text": "eu agora"}, {"t": 13.54, "k": "big", "text": "faço assim"}]},
- {"start": 21.26, "end": 22.0, "items": [{"t": 21.28, "k": "label", "text": "e a verdade"}, {"t": 21.68, "k": "big", "text": "é que"}]},
+ {"start": 21.6, "end": 22.0, "items": [{"t": 21.6, "k": "label", "text": "e a verdade"}, {"t": 21.72, "k": "big", "text": "é que"}]},
  {"start": 22.0, "end": 22.84, "items": [{"t": 21.96, "k": "label", "text": "2 horas", "strike": 22.06}, {"t": 22.04, "k": "big", "text": "10 minutos", "acc": true}]},
  {"start": 22.84, "end": 23.4, "items": [{"t": 22.7, "k": "label", "text": "um vídeo"}, {"t": 22.98, "k": "big", "text": "pronto"}]},
  {"start": 23.4, "end": 24.5, "items": [{"t": 23.24, "k": "label", "text": "para lançar nas"}, {"t": 23.8, "k": "big", "text": "redes sociais"}]},

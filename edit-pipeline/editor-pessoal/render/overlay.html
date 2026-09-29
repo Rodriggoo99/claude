@@ -167,15 +167,15 @@ function renderP(t){const g=$('gP');const vis=t>=P.in&&t<P.out+0.32;g.style.disp
 
 // ---- takes → folder → prompt card typed as I read it (14.2 → 21.3)
 const PT=[['Corta',16.60],['as',16.90],['pausas',16.98],['e',17.50],['os',17.58],['erros.',17.70],['Põe',18.08],['legendas',18.26],['no',18.76],['meu',18.84],['estilo,',18.98],['formato',19.42],['vertical,',19.98],['4K.',20.58]];
-function renderPW(t){const g=$('pw');const vis=t>=14.12&&t<21.34;g.style.display=vis?'block':'none';if(!vis)return;
-  const gin=eo5((t-14.12)/0.3),gout=eio((t-21.02)/0.3);$('pwbg').style.opacity=1;g.style.opacity=clamp((t-14.12)/0.12);
+function renderPW(t){const g=$('pw');const vis=t>=14.12&&t<21.72;g.style.display=vis?'block':'none';if(!vis)return;
+  const gin=eo5((t-14.12)/0.3),gout=eio((t-21.40)/0.3);$('pwbg').style.opacity=1;g.style.opacity=clamp((t-14.12)/0.12);
   g.style.transform=`translateY(${gout*-1980}px)`;$('pwbg').style.transform=`scale(${1.06-0.06*gin})`;reveal($('pwk'),p(t,14.30,0.3)*(1-eio((t-15.62)/0.2)),10,5);
   // folder with the raw takes dropping in
   const f=$('folder'),fin=eo5((t-14.22)/0.3),fto=eio((t-15.62)/0.3);
   f.style.opacity=clamp((t-14.22)/0.08)*(1-fto);f.style.transform=`translateY(${(1-fin)*30}px) scale(${(0.9+0.1*fin)*(1-0.55*fto)}) translateY(${fto*-100}px)`;
   [['c1',14.50],['c2',14.62],['c3',14.74]].forEach(([id,t0],i)=>{const k=eo5((t-t0)/0.26),e=$(id);e.style.opacity=clamp((t-t0)/0.05);e.style.transform=`translateY(${(1-k)*-22}px) rotate(${[-8,3,9][i]*(1-0.6*k)}deg)`});
   // card
-  const c=$('card'),cin=eo5((t-15.66)/0.34),cout=eio((t-20.98)/0.3);
+  const c=$('card'),cin=eo5((t-15.66)/0.34),cout=eio((t-21.06)/0.3);
   c.style.opacity=clamp((t-15.66)/0.1)*(1-cout);c.style.transform=`translateY(${(1-cin)*40}px) scale(${0.94+0.06*cin}) translateY(${cout*-120}px)`;c.style.filter=cout>0?`blur(${cout*8}px)`:'none';
   reveal($('att'),p(t,15.84,0.24),10,4);
   let s='';PT.forEach(([w,t0],i)=>{const n=Math.max(0,Math.min(w.length,Math.floor((t-t0)/0.03)+1));if(t>=t0)s+=(s?' ':'')+w.slice(0,n)});
