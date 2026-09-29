@@ -8,5 +8,5 @@ Resumo obrigatório:
 - Legendas ao peito (1–3 palavras, etiqueta Inter Bold + palavra condensada Inter Tight / itálico Instrument Serif, destaque âmbar `#F2B24C`). Hook com impacto a **entrar arrastado** (a palavra/número gigante atrás da cabeça funciona, mas variar de vídeo para vídeo).
 - Espaço de cima só em momentos-chave (não encher). Gráficos completos visíveis ~1 s antes de sair. Variar os motion graphics de vídeo para vídeo.
 - Margens seguras Reels/TikTok verificadas frame a frame (medir letras reais, não caixas).
-- Fluxo: primeiro uma **pré-visualização 1080p** para aprovação, só depois a final em 4K.
+- Fluxo: primeiro uma **pré-visualização 1080p** para aprovação, depois a final — **o vídeo final é sempre em 4K** (vai pelo GitHub/LFS, passa do limite do chat).
 - Ficheiros grandes vão para o GitHub via Git LFS (o conector do Drive só aceita ≤10 MB; enviar no chat ≤30 MB).

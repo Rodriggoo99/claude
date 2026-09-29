@@ -13,7 +13,7 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 
 ## Imagem
 - **Não mexer na cor** — faço eu a cor. Trabalhar sempre em 10-bit quando o original é 10-bit (DJI).
-- Entregar **só o vídeo completo** (voz + legendas + gráficos + efeitos), sem ficheiros separados (nada de plate, camada de texto ou stems).
+- Entregar **só o vídeo completo** (voz + legendas + gráficos + efeitos), **sempre em 4K**, sem ficheiros separados (nada de plate, camada de texto ou stems).
 - Tudo dentro das **margens seguras** do Reels/TikTok (1080×1920: 250 px em cima, 480 px em baixo, 120 px à direita, 60 px à esquerda). Verificar frame a frame.
 - Zooms: poucos, suaves, **sempre centrados na cara**.
 

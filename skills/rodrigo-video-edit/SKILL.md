@@ -18,7 +18,7 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 
 ## Imagem
 - **Não mexer na cor** — faço eu a cor. Trabalhar sempre em 10-bit quando o original é 10-bit (DJI).
-- Entregar **só o vídeo completo** (voz + legendas + gráficos + efeitos), sem ficheiros separados (nada de plate, camada de texto ou stems).
+- Entregar **só o vídeo completo** (voz + legendas + gráficos + efeitos), **sempre em 4K**, sem ficheiros separados (nada de plate, camada de texto ou stems).
 - Tudo dentro das **margens seguras** do Reels/TikTok (1080×1920: 250 px em cima, 480 px em baixo, 120 px à direita, 60 px à esquerda). Verificar frame a frame.
 - Zooms: poucos, suaves, **sempre centrados na cara**.
 
@@ -59,4 +59,4 @@ Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
 1. Transcrever (Whisper large-v3, pt) com tempos por palavra; verificar zonas com som que a transcrição saltou.
 2. Agrupar takes por frase; escolher o melhor (entoação medida + frames da cara); corte apertado; sem mexer na velocidade; confirmar com nova transcrição.
 3. Mandar **pré-visualização 1080p** para aprovação.
-4. Final 4K: só o vídeo completo (sem música, a não ser que ele peça). Verificar margens seguras frame a frame.
+4. Final **sempre em 4K**: só o vídeo completo (sem música, a não ser que ele peça). Verificar margens seguras frame a frame. Ficheiro > 30 MB → enviar pelo GitHub (Git LFS) com link direto.
