@@ -8,7 +8,7 @@ Resultado: **49,1 s** à **velocidade original (1.0x)**, voz a **-14 LUFS**. **A
 
 ## Estado
 - [x] **Vídeo completo 1080p** (sem música, 1.0x) — `Dia 1 de Outubro - Completo 1080p.mp4` — conteúdo aprovado ("o 92 no hook está incrível")
-- [ ] **Vídeo completo 4K** — `Dia 1 de Outubro - Completo 4K.mp4` (a renderizar)
+- [x] **Vídeo completo 4K** — `Dia 1 de Outubro - Completo 4K.mp4` (2160×3840, 60 fps, H.264, 49,1 s, sem música)
 
 A pedido do Rodrigo: **só o vídeo completo** (sem plate/texto/stems separados) e **sem música** — a música entra na app.
 Sugestão de música: **"Time" – Hans Zimmer** (alternativas: "Experience" – Einaudi, "Cornfield Chase" – Zimmer), na app a 10–15 % com o áudio original a 100.
