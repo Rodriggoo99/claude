@@ -48,4 +48,4 @@ Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
 - **Evitar:** o mesmo ecrã azul-escuro com tabelas/cartões em todos os vídeos.
 
 ## Som
-- Voz a **-14 LUFS**. Efeitos discretos por baixo da voz (whooshes nas transições, papel a deslizar, marcador a riscar, impacto nas palavras-herói). **Sem música no ficheiro** — o Rodrigo mete a música na app (Instagram/TikTok); sugerir uma que faça sentido e a que volume (voz sempre bem audível).
+- Voz a **-14 LUFS**. Efeitos discretos por baixo da voz (whooshes nas transições, papel a deslizar, marcador a riscar, impacto nas palavras-herói). **Música: por defeito, sem música no ficheiro** — o Rodrigo mete-a na app (Instagram/TikTok); sugerir sempre uma que faça sentido e a que volume. **Quando ele pedir música no vídeo**, misturá-la no ficheiro (ele manda o ficheiro da música ou escolhe-se uma com ele) com ducking automático: a música baixa quando ele fala (~16–20 dB abaixo da voz) e sobe um pouco nas pausas/ecrãs; a voz tem de se ouvir sempre bem.

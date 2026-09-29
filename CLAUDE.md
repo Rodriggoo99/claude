@@ -4,7 +4,7 @@ Sempre que editares um vídeo do Rodrigo, segue **`GUIA-DE-ESTILO-VIDEOS.md`** �
 
 Resumo obrigatório:
 - Corte apertado, sem frases repetidas, melhor take por entoação + cara; **não mexer na velocidade** (o Rodrigo já manda o vídeo a 1.1x); se houver CTA com a mão à câmara, cortar quando a mão chega.
-- **Não mexer na cor.** Trabalhar em 10-bit. Entregar **só o vídeo completo** — nada de ficheiros separados. **Sem música** (ele mete na app; sugerir uma).
+- **Não mexer na cor.** Trabalhar em 10-bit. Entregar **só o vídeo completo** — nada de ficheiros separados. **Música: por defeito não** (ele mete na app; sugerir uma); **se ele pedir**, misturar no vídeo com ducking e a voz sempre por cima.
 - Legendas ao peito (1–3 palavras, etiqueta Inter Bold + palavra condensada Inter Tight / itálico Instrument Serif, destaque âmbar `#F2B24C`). Hook com impacto a **entrar arrastado** (a palavra/número gigante atrás da cabeça funciona, mas variar de vídeo para vídeo).
 - Espaço de cima só em momentos-chave (não encher). Gráficos completos visíveis ~1 s antes de sair. Variar os motion graphics de vídeo para vídeo.
 - Margens seguras Reels/TikTok verificadas frame a frame (medir letras reais, não caixas).
