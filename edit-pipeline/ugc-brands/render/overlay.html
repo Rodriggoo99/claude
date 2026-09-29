@@ -1,79 +1,73 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
-<!-- UGC (EN) base: "creator studio" system. Expanded grotesk + mono UI labels, ink on the white tee,
-     one ember accent from the fire painting, viewfinder hook, light frosted-glass cards. -->
+<!-- UGC (EN) base v2: "creator studio". Expanded grotesk + mono labels, captions in the empty wall space above the
+     head (white tee), warm aesthetic palette (cream / peach / terracotta, never black), light frosted-glass cards. -->
 <style>
 @font-face{font-family:Archivo;font-weight:100 900;font-stretch:62% 125%;
   src:url(node_modules/@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2) format('woff2-variations')}
-@font-face{font-family:Mono;font-weight:500;src:url(node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff2)}
 @font-face{font-family:Mono;font-weight:700;src:url(node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2)}
 @font-face{font-family:Mono;font-weight:800;src:url(node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-800-normal.woff2)}
-:root{--ink:#111113;--ink2:rgba(17,17,19,.72);--ember:#FF5B24;--glass:rgba(250,250,248,.62)}
+:root{--cream:#FFF4E6;--peach:#FFB78E;--terra:#E0784F;--espresso:#4A3A31;--esp2:rgba(74,58,49,.62);--glass:rgba(250,248,245,.62);
+  --shadow:drop-shadow(0 5px 18px rgba(58,34,22,.42)) drop-shadow(0 1px 3px rgba(58,34,22,.35))}
 html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hidden}
 *{box-sizing:border-box}
 .abs{position:absolute}
 #root{position:absolute;inset:0}
-/* ---------- captions ---------- */
-.chunk{position:absolute;left:60px;width:900px;top:1185px;text-align:center;display:none}
-.label{font-family:Mono;font-weight:800;font-size:33px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2);
-  white-space:nowrap;line-height:1.25;margin:0 auto 8px;position:relative;text-shadow:0 0 8px rgba(255,255,255,.9),0 0 18px rgba(255,255,255,.55)}
-.label .todo{color:transparent}
-.label .cur{display:inline-block;width:.62em;height:1.02em;background:var(--ember);vertical-align:-.16em;margin-left:.08em}
-.hero{font-family:Archivo;font-stretch:125%;font-weight:850;font-size:100px;line-height:.93;letter-spacing:-.018em;
-  text-transform:uppercase;color:var(--ink);white-space:nowrap;position:relative;display:inline-block}
-.hero.outline{color:transparent;-webkit-text-stroke:3px var(--ink)}
-.hero .acc,.acc{color:var(--ember)}
+/* ---------- captions: top wall space, centred on the frame (x = 540) ---------- */
+.chunk{position:absolute;left:120px;width:840px;bottom:1395px;text-align:center;display:none}
+.label{font-family:Mono;font-weight:800;font-size:33px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,244,230,.94);
+  white-space:nowrap;line-height:1.25;margin:0 auto 10px;position:relative;
+  text-shadow:0 2px 14px rgba(58,34,22,.55),0 1px 3px rgba(58,34,22,.45)}
+.label .todo{color:transparent;text-shadow:none}
+.label .cur{display:inline-block;width:.6em;height:1em;background:var(--peach);vertical-align:-.14em;margin-left:.08em;box-shadow:0 1px 6px rgba(58,34,22,.35)}
+.hero{font-family:Archivo;font-stretch:125%;font-weight:850;font-size:92px;line-height:.95;letter-spacing:-.018em;
+  text-transform:uppercase;color:var(--cream);white-space:nowrap;position:relative;display:inline-block}
+.hero.outline{color:transparent;-webkit-text-stroke:3px var(--cream)}
+.hero .acc{color:var(--peach)}
+.hero.sweep{background-image:linear-gradient(100deg,var(--cream) 0%,var(--cream) 40%,#FFFFFF 47%,#FFE3CF 50%,#FFFFFF 53%,var(--cream) 60%,var(--cream) 100%);
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
 .row{display:block}
-.strike{position:absolute;left:-4%;top:50%;height:9px;margin-top:-4px;background:var(--ember);border-radius:6px;transform-origin:left center}
-.tail{margin-top:12px}
-/* ---------- viewfinder ---------- */
-#vf{display:none}
-.brk{position:absolute;width:72px;height:72px;border:0 solid #fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.25))}
-.vfT{font-family:Mono;font-weight:700;font-size:27px;letter-spacing:.08em;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.3)}
-#rec{left:104px;top:300px;display:flex;align-items:center;gap:14px}
-#recDot{width:20px;height:20px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px rgba(255,91,36,.6)}
-#tc{right:152px;top:300px;font-variant-numeric:tabular-nums}
-#af{position:absolute;width:330px;height:380px}
-#af i{position:absolute;width:46px;height:46px;border:0 solid #fff}
+.strike{position:absolute;left:-4%;top:52%;height:9px;margin-top:-4px;background:var(--terra);border-radius:6px;transform-origin:left center;
+  box-shadow:0 2px 10px rgba(58,34,22,.35)}
+.tail{margin-top:12px;margin-bottom:0}
 /* ---------- IG card ---------- */
-#ig{position:absolute;left:70px;top:1030px;width:880px;display:none}
-#igCard{position:relative;width:880px;height:372px;border-radius:34px;overflow:hidden;background:#fff;
-  box-shadow:0 40px 90px rgba(0,0,0,.30),0 8px 24px rgba(0,0,0,.16)}
-#igZ{position:absolute;left:0;top:0;width:880px;transform-origin:525px 139px}
+#ig{position:absolute;left:120px;top:1030px;width:840px;display:none}
+#igCard{position:relative;width:840px;height:356px;border-radius:34px;overflow:hidden;background:#fff;
+  box-shadow:0 40px 90px rgba(40,24,14,.30),0 8px 24px rgba(40,24,14,.16)}
+#igZ{position:absolute;left:0;top:0;width:840px;transform-origin:501px 132px}
 #igZ img{display:block;width:100%}
 #igRing{position:absolute;left:0;top:0;width:100%;height:100%}
-#igChip{position:absolute;right:16px;top:-34px;background:var(--ember);color:#fff;font-family:Mono;font-weight:800;font-size:28px;
-  letter-spacing:.04em;padding:14px 22px 13px;border-radius:40px;box-shadow:0 10px 30px rgba(255,91,36,.35)}
 /* ---------- glass ---------- */
 .gl{position:absolute;display:none}
 .gbg{position:absolute;inset:0;border-radius:38px;background:var(--glass);border:1.5px solid rgba(255,255,255,.85);
-  box-shadow:0 30px 80px rgba(0,0,0,.20),0 6px 18px rgba(0,0,0,.10)}
+  box-shadow:0 30px 80px rgba(40,24,14,.20),0 6px 18px rgba(40,24,14,.10)}
 .gin{position:relative}
-#brief{left:70px;top:1022px;width:880px;height:404px}
-#brief .gin{padding:30px 38px 0 38px}
-.bh{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-weight:700;font-size:25px;letter-spacing:.08em;color:var(--ink2);text-transform:uppercase}
-.bh .dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--ember);margin-right:12px;vertical-align:1px}
-.bsep{height:2px;background:rgba(17,17,19,.1);margin:22px 0 6px}
-.brow{display:grid;grid-template-columns:78px 1fr 56px;align-items:center;height:98px;border-bottom:2px solid rgba(17,17,19,.07)}
+#brief{left:120px;top:1022px;width:840px;height:404px}
+#brief .gin{padding:30px 36px 0 36px}
+.bh{display:flex;justify-content:space-between;align-items:center;font-family:Mono;font-weight:800;font-size:25px;letter-spacing:.08em;color:var(--esp2);text-transform:uppercase}
+.bh .dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--terra);margin-right:12px;vertical-align:1px}
+.bsep{height:2px;background:rgba(74,58,49,.12);margin:22px 0 6px}
+.brow{display:grid;grid-template-columns:74px 1fr 56px;align-items:center;height:98px;border-bottom:2px solid rgba(74,58,49,.08)}
 .brow:last-child{border-bottom:0}
-.bn{font-family:Mono;font-weight:700;font-size:28px;color:rgba(17,17,19,.42)}
+.bn{font-family:Mono;font-weight:800;font-size:28px;color:rgba(74,58,49,.38)}
 .bt{position:relative;height:60px}
-.bt .sk{position:absolute;left:0;top:17px;height:26px;border-radius:13px;background:rgba(17,17,19,.09);overflow:hidden}
-.bt .sk i{position:absolute;top:0;bottom:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent)}
-.bt .tx{position:absolute;left:0;top:0;line-height:60px;font-family:Archivo;font-stretch:112%;font-weight:800;font-size:42px;letter-spacing:-.012em;
-  text-transform:uppercase;color:var(--ink);white-space:nowrap}
-.cb{width:52px;height:52px;border-radius:14px;border:3px solid rgba(17,17,19,.25);position:relative}
-.cb .f{position:absolute;inset:-3px;border-radius:14px;background:var(--ember)}
+.bt .sk{position:absolute;left:0;top:17px;height:26px;border-radius:13px;background:rgba(74,58,49,.10);overflow:hidden}
+.bt .sk i{position:absolute;top:0;bottom:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent)}
+.bt .tx{position:absolute;left:0;top:0;line-height:60px;font-family:Archivo;font-stretch:112%;font-weight:800;font-size:40px;letter-spacing:-.012em;
+  text-transform:uppercase;color:var(--espresso);white-space:nowrap}
+.bt .tx .acc{color:var(--terra)}
+.cb{width:52px;height:52px;border-radius:14px;border:3px solid rgba(74,58,49,.25);position:relative}
+.cb .f{position:absolute;inset:-3px;border-radius:14px;background:var(--terra)}
 .cb svg{position:absolute;inset:0;width:100%;height:100%}
 /* save pill */
-#save{left:195px;top:1215px;width:630px;height:150px}
+#save{left:225px;top:1215px;width:630px;height:150px}
 #save .gbg{border-radius:75px}
 #save .gin{display:flex;align-items:center;height:150px;padding:0 50px 0 46px;gap:30px}
-#save .st{font-family:Archivo;font-stretch:125%;font-weight:850;font-size:62px;letter-spacing:-.015em;color:var(--ink);line-height:1}
-#save .sl{font-family:Mono;font-weight:700;font-size:27px;letter-spacing:.08em;color:var(--ink2);margin-top:8px}
-/* depth word */
+#save .st{font-family:Archivo;font-stretch:125%;font-weight:850;font-size:62px;letter-spacing:-.015em;color:var(--espresso);line-height:1}
+#save .sl{font-family:Mono;font-weight:800;font-size:27px;letter-spacing:.08em;color:var(--esp2);margin-top:8px}
+/* depth word (behind the head) */
 #depth{position:absolute;left:60px;width:900px;top:583px;padding:20px 0;overflow:hidden;text-align:center;display:none}
-#depth .hero{font-size:150px;font-stretch:125%;font-weight:900;letter-spacing:-.03em}
+#depth .hero{font-size:150px;font-stretch:125%;font-weight:900;letter-spacing:-.03em;color:var(--terra)}
 /* render modes */
 body.mask #root *{visibility:hidden}
 body.mask .gbg{visibility:visible!important;background:#fff!important;border-color:transparent!important;box-shadow:none!important}
@@ -84,38 +78,23 @@ body.depth #root>*:not(#depth){visibility:hidden}
 <svg width="0" height="0" style="position:absolute"><defs id="defs"></defs></svg>
 <div id="root">
   <div id="depth"><span class="hero" id="dW">Quality</span></div>
-
-  <div id="vf">
-    <i class="brk" id="k0" style="left:100px;top:272px;border-left-width:5px;border-top-width:5px"></i>
-    <i class="brk" id="k1" style="left:858px;top:272px;border-right-width:5px;border-top-width:5px"></i>
-    <i class="brk" id="k2" style="left:100px;top:1344px;border-left-width:5px;border-bottom-width:5px"></i>
-    <i class="brk" id="k3" style="left:858px;top:1344px;border-right-width:5px;border-bottom-width:5px"></i>
-    <div id="rec" class="abs vfT"><span id="recDot"></span><span>REC</span></div>
-    <div id="tc" class="abs vfT">00:00:00:00</div>
-    <div id="af">
-      <i style="left:0;top:0;border-left-width:5px;border-top-width:5px"></i><i style="right:0;top:0;border-right-width:5px;border-top-width:5px"></i>
-      <i style="left:0;bottom:0;border-left-width:5px;border-bottom-width:5px"></i><i style="right:0;bottom:0;border-right-width:5px;border-bottom-width:5px"></i>
-    </div>
-  </div>
-
   <div id="caps"></div>
 
   <div id="ig">
     <div id="igCard"><div id="igZ"><img src="assets/ig_profile.png">
-      <svg id="igRing" viewBox="0 0 1206 593"><path id="igPath" fill="none" stroke="#FF5B24" stroke-width="9" stroke-linecap="round"
+      <svg id="igRing" viewBox="0 0 1206 593"><path id="igPath" fill="none" stroke="#E0784F" stroke-width="9" stroke-linecap="round"
         d="M905 196 C 906 150, 810 146, 752 148 C 690 150, 652 170, 652 214 C 652 262, 720 282, 800 280 C 880 278, 922 252, 914 208 C 908 180, 870 162, 830 158"/></svg>
     </div></div>
-    <div id="igChip">&lt;1K FOLLOWERS</div>
   </div>
 
   <div id="brief" class="gl"><div class="gbg"></div><div class="gin">
-    <div class="bh"><span><span class="dot"></span>What brands want</span><span id="bCount">0/3</span></div>
+    <div class="bh"><span><span class="dot"></span>The brief</span><span id="bCount">0/3</span></div>
     <div class="bsep"></div>
     <div id="bRows"></div>
   </div></div>
 
   <div id="save" class="gl"><div class="gbg"></div><div class="gin">
-    <svg id="bm" viewBox="0 0 24 30" style="width:62px;height:76px;flex:none"><path id="bmp" d="M3 3.5A2.5 2.5 0 0 1 5.5 1h13A2.5 2.5 0 0 1 21 3.5V28l-9-6.2L3 28z" fill="none" stroke="#111113" stroke-width="2.4" stroke-linejoin="round"/></svg>
+    <svg id="bm" viewBox="0 0 24 30" style="width:62px;height:76px;flex:none"><path id="bmp" d="M3 3.5A2.5 2.5 0 0 1 5.5 1h13A2.5 2.5 0 0 1 21 3.5V28l-9-6.2L3 28z" fill="none" stroke="#4A3A31" stroke-width="2.4" stroke-linejoin="round"/></svg>
     <div><div class="st">SAVE THIS</div><div class="sl" id="sl"></div></div>
   </div></div>
 </div>
@@ -128,11 +107,15 @@ const back=x=>{x=clamp(x);const c=1.9;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(
 const p=(t,t0,d)=>clamp((t-t0)/d);
 const $=id=>document.getElementById(id);
 const ENTER=0.30;           // hero drag-in duration
+const SHADOW='drop-shadow(0 5px 18px rgba(58,34,22,.42)) drop-shadow(0 1px 3px rgba(58,34,22,.35))';
 let nf=0;
 function mblur(el){const id='mb'+(nf++);const f=document.createElementNS('http://www.w3.org/2000/svg','filter');
   f.setAttribute('id',id);f.setAttribute('x','-50%');f.setAttribute('width','200%');
   f.innerHTML='<feGaussianBlur stdDeviation="0 0"/>';$('defs').appendChild(f);el._g=f.firstChild;el._fid=id;}
-function setBlur(el,sx,sy=0){if(sx<0.3&&sy<0.3){el.style.filter='none';return}el._g.setAttribute('stdDeviation',`${sx.toFixed(1)} ${sy.toFixed(1)}`);el.style.filter=`url(#${el._fid})`}
+// motion blur (SVG, directional) chained with the warm soft shadow
+function setBlur(el,sx,sy=0){const sh=el._noShadow?'':SHADOW;
+  if(sx<0.3&&sy<0.3){el.style.filter=sh||'none';return}
+  el._g.setAttribute('stdDeviation',`${sx.toFixed(1)} ${sy.toFixed(1)}`);el.style.filter=`url(#${el._fid}) ${sh}`}
 // hero word dragged in from the side with a directional motion blur
 function drag(el,t,t0,dir=1,dist=150){
   const u=p(t,t0,ENTER),k=eo5(u);
@@ -141,7 +124,9 @@ function drag(el,t,t0,dir=1,dist=150){
   const v=u<1?dir*dist*5*Math.pow(1-u,4)/ENTER/60:0; // px per frame
   setBlur(el,Math.abs(v)*0.9);
 }
-// mono label typed on, with the ember block cursor
+// soft light sweep across a landed hero word
+function sweep(el,t,t0){const u=eio(p(t,t0,0.75));el.style.backgroundPosition=`${100-100*u}% 0`;}
+// mono label typed on, with the peach block cursor
 function type(el,t,t0,cps=34){
   const s=el._s,n=Math.floor(clamp((t-t0)*cps/s.length)*s.length+1e-6);
   const done=n>=s.length;const blink=done&&(t-t0-s.length/cps)>0.28;
@@ -150,21 +135,21 @@ function type(el,t,t0,cps=34){
 }
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
 
-// ---------------- captions ----------------
-// each chunk: start/end, items: {k:'label'|'hero', text, t, ...}
+// ---------------- captions (times on Rodrigo's 1.1x cut, used as-is) ----------------
 const CAPS=[
- {s:0.00,e:0.86,items:[{k:'hero',text:"I'LL SAY THIS",t:-0.14,size:86}]},
- {s:0.86,e:1.61,items:[{k:'label',text:'for the',t:0.86},{k:'hero',text:'LAST TIME.',t:0.90}]},
+ {s:0.00,e:0.86,items:[{k:'hero',text:"I'LL SAY THIS",t:-0.14,size:84,sweep:0.22}]},
+ {s:0.86,e:1.61,items:[{k:'label',text:'for the',t:0.86},{k:'hero',text:'LAST TIME.',t:0.90,sweep:1.14}]},
  {s:1.65,e:3.12,items:[{k:'label',text:"Brands don't want",t:1.67},{k:'hero',text:'FOLLOWERS',t:2.44,strike:2.75}]},
- {s:3.15,e:4.18,items:[{k:'label',text:'They want',t:3.15},{k:'hero',text:'THIS.',t:3.52,dir:-1}]},
+ {s:3.15,e:4.18,items:[{k:'label',text:'They want',t:3.15},{k:'hero',text:'THIS.',t:3.52,dir:-1,size:150,sweep:3.80}]},
  {s:4.18,e:5.15,items:[{k:'label',text:'I worked with some of the',t:4.18,cps:44}]},
- {s:5.15,e:6.38,items:[{k:'hero',text:'BIGGEST',t:5.17},{k:'hero',text:'BRANDS',t:5.43,dir:-1},{k:'label',text:'in the world',t:5.79,tail:1}]},
+ {s:5.15,e:6.30,items:[{k:'hero',text:'BIGGEST',t:5.17},{k:'hero',text:'BRANDS',t:5.43,dir:-1},{k:'label',text:'in the world',t:5.79,tail:1}]},
+ {s:6.32,e:8.80,items:[{k:'label',text:'and I had less than',t:6.34,cps:40},{k:'hero',text:'<span class="acc">1K</span>',t:7.44,size:118},{k:'hero',text:'FOLLOWERS',t:7.74,dir:-1,size:84}]},
  {s:8.91,e:9.42,items:[{k:'label',text:'Because in',t:8.91},{k:'hero',text:'UGC,',t:8.95}]},
- {s:9.42,e:11.29,items:[{k:'label',text:'The brand is',t:9.42,cps:40},{k:'hero',text:'NOT BUYING',t:9.96,size:90},{k:'hero',text:'AUDIENCE',t:10.58,outline:1,strike:10.98,size:90,dir:-1}]},
+ {s:9.42,e:11.29,items:[{k:'label',text:'The brand is',t:9.42,cps:40},{k:'hero',text:'NOT BUYING',t:9.96,size:84},{k:'hero',text:'AUDIENCE',t:10.58,outline:1,strike:10.98,size:84,dir:-1}]},
  {s:11.31,e:12.43,items:[{k:'label',text:"They're buying the",t:11.31,cps:40}]},
- {s:12.43,e:13.49,items:[{k:'label',text:'of your',t:12.43},{k:'hero',text:'CONTENT.',t:12.80,dir:-1}]},
- {s:13.51,e:15.25,items:[{k:'label',text:'And brands just want',t:13.51,cps:42},{k:'hero',text:'<span class="acc">3</span> THINGS',t:14.45}]},
- {s:22.29,e:23.19,items:[{k:'label',text:'So yes, brands',t:22.29,cps:44},{k:'hero',text:"DON'T CARE",t:22.66}]},
+ {s:12.43,e:13.49,items:[{k:'label',text:'of your',t:12.43},{k:'hero',text:'CONTENT.',t:12.80,dir:-1,size:80}]},
+ {s:13.51,e:22.24,items:[{k:'label',text:'And brands just want',t:13.51,cps:42},{k:'hero',text:'<span class="acc">3</span> THINGS',t:14.45}]},
+ {s:22.29,e:23.19,items:[{k:'label',text:'So yes, brands',t:22.29,cps:44},{k:'hero',text:"DON'T CARE",t:22.66,size:88,sweep:22.96}]},
  {s:23.21,e:24.20,items:[{k:'label',text:'about your',t:23.21},{k:'hero',text:'FOLLOWERS',t:23.58,dir:-1,strike:23.91}]},
 ];
 function buildCaps(){
@@ -173,7 +158,8 @@ function buildCaps(){
     c.items.forEach(it=>{
       const w=document.createElement('div');w.className='row';
       if(it.k==='label'){const l=document.createElement('div');l.className='label'+(it.tail?' tail':'');l._s=it.text;w.appendChild(l);it.el=l}
-      else{const h=document.createElement('span');h.className='hero'+(it.outline?' outline':'');h.innerHTML=it.text;if(it.size)h.style.fontSize=it.size+'px';w.appendChild(h);it.el=h;mblur(h);
+      else{const h=document.createElement('span');h.className='hero'+(it.outline?' outline':'')+(it.sweep!==undefined?' sweep':'');
+        h.innerHTML=it.text;if(it.size)h.style.fontSize=it.size+'px';w.appendChild(h);it.el=h;mblur(h);
         if(it.strike!==undefined){const s=document.createElement('i');s.className='strike';h.appendChild(s);it.st=s}}
       d.appendChild(w);
     });
@@ -182,47 +168,29 @@ function buildCaps(){
 function renderCaps(t){
   CAPS.forEach(c=>{
     const on=t>=c.s-0.001&&t<c.e;c.el.style.display=on?'block':'none';if(!on)return;
-    const out=clamp((c.e-t)/0.07);c.el.style.opacity=out;
+    const out=clamp((c.e-t)/0.08);c.el.style.opacity=out;
     c.items.forEach(it=>{
       if(it.k==='label')type(it.el,t,it.t,it.cps||36);
       else{drag(it.el,t,it.t,it.dir||1);
+        if(it.sweep!==undefined)sweep(it.el,t,it.sweep);
         if(it.st){const k=eo(p(t,it.strike,0.2));it.st.style.width=(108*k)+'%';it.st.style.transform='rotate(-4deg)';it.st.style.opacity=k>0?1:0;
-          if(k>0)it.el.style.color=it.el.classList.contains('outline')?'':'rgba(17,17,19,'+(1-0.45*k)+')'}}
+          if(k>0)it.el.style.opacity=Math.min(parseFloat(it.el.style.opacity||1),1-0.35*k)}}
     });
   });
 }
 
-// ---------------- viewfinder hook ----------------
-const VF={in:0.00,out:4.09,lock:3.52,face:[575,887]};
-function renderVF(t){
-  const vis=t<VF.out+0.14;$('vf').style.display=vis?'block':'none';if(!vis)return;
-  const kin=eo5(p(t,-0.2,0.35)),kout=1-eo(p(t,VF.out,0.14));$('vf').style.opacity=kout;
-  const sp=[[-1,-1],[1,-1],[-1,1],[1,1]];
-  sp.forEach(([sx,sy],i)=>{$('k'+i).style.transform=`translate(${sx*(1-kin)*16}px,${sy*(1-kin)*16}px)`;$('k'+i).style.opacity=kin});
-  $('rec').style.opacity=kin;$('tc').style.opacity=kin;
-  $('recDot').style.opacity=(Math.floor(t*2)%2===0)?1:0.25;
-  const f=Math.floor(t*60),ss=Math.floor(t)%60;$('tc').textContent=`00:00:${String(ss).padStart(2,'0')}:${String(Math.floor((t%1)*60)).padStart(2,'0')}`;
-  // AF box locks onto the face on "this"
-  const af=$('af'),u=p(t,VF.lock-0.05,0.22);
-  af.style.display=t>=VF.lock-0.05?'block':'none';
-  const s=1.45-0.45*eo5(u)+(t>VF.lock+0.17&&t<VF.lock+0.33?0.04*Math.sin(Math.PI*(t-VF.lock-0.17)/0.16):0);
-  af.style.left=(VF.face[0]-165)+'px';af.style.top=(VF.face[1]-190)+'px';af.style.transform=`scale(${s})`;af.style.opacity=clamp(u*2.5);
-  const col=t>VF.lock+0.15?'#FF5B24':'#fff';af.querySelectorAll('i').forEach(i=>i.style.borderColor=col);
-}
-
-// ---------------- IG profile card ----------------
-const IG={in:6.36,zoom:6.86,ring:7.39,chip:7.72,out:8.80};
+// ---------------- IG profile card (real screenshot) ----------------
+const IG={in:6.36,zoom:6.86,ring:7.39,out:8.80};
 function renderIG(t){
   const g=$('ig'),vis=t>=IG.in&&t<IG.out+0.22;g.style.display=vis?'block':'none';if(!vis)return;
   const u=p(t,IG.in,0.42),k=back(u),ko=eio(p(t,IG.out,0.2));
   const y=(1-k)*50+ko*30, r=(1-k)*-4, s=0.9+0.1*Math.min(k,1.0);
   g.style.transform=`translateY(${y}px) rotate(${r}deg) scale(${s})`;g.style.opacity=clamp(u*3)*(1-ko);
-  if(!g._f)mblur(g),g._f=1;
+  if(!g._f){mblur(g);g._f=1;g._noShadow=1}
   setBlur(g,0,Math.max(u<0.45?(0.45-u)*40:0,ko*14));
-  const zk=eio(p(t,IG.zoom,0.42));$('igZ').style.transform=`scale(${1+0.42*zk})`;$('igCard').style.height=(372-82*zk)+'px';
+  const zk=eio(p(t,IG.zoom,0.42));$('igZ').style.transform=`scale(${1+0.42*zk})`;$('igCard').style.height=(356-78*zk)+'px';
   const path=$('igPath'),L=path._L||(path._L=path.getTotalLength());const rk=eio(p(t,IG.ring,0.34));
   path.style.strokeDasharray=L;path.style.strokeDashoffset=L*(1-rk);path.style.opacity=rk>0?1:0;
-  const c=$('igChip'),ck=back(p(t,IG.chip,0.3));c.style.opacity=clamp(p(t,IG.chip,0.08));c.style.transform=`rotate(-4deg) scale(${0.4+0.6*ck})`;
 }
 
 // ---------------- glass brief card ----------------
@@ -233,12 +201,12 @@ const BR={in:15.27,out:22.24,rows:[
 function buildBrief(){
   BR.rows.forEach((r,i)=>{const d=document.createElement('div');d.className='brow';
     d.innerHTML=`<div class="bn">0${i+1}</div><div class="bt"><div class="sk" style="width:${r.sk}%"><i></i></div><div class="tx"></div></div>
-      <div class="cb"><div class="f"></div><svg viewBox="0 0 52 52"><path d="M14 27 L23 35 L39 17" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
+      <div class="cb"><div class="f"></div><svg viewBox="0 0 52 52"><path d="M14 27 L23 35 L39 17" fill="none" stroke="#FFF4E6" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
     $('bRows').appendChild(d);r.el=d;const tx=d.querySelector('.tx');
     if(r.rev2){const [a,b]=r.txt.split(' <span');tx.innerHTML=`<span class="p1">${a}</span> <span class="p2"><span${b}</span>`}else tx.innerHTML=`<span class="p1">${r.txt}</span>`;
   });
 }
-function glassIn(el,t,tin,tout,dy=180){
+function glassIn(el,t,tin,tout,dy=50){
   const vis=t>=tin&&t<tout+0.22;el.style.display=vis?'block':'none';if(!vis)return false;
   const u=p(t,tin,0.4),k=back(u),ko=eio(p(t,tout,0.2));
   el.style.transform=`translateY(${(1-k)*dy+ko*30}px) scale(${0.92+0.08*Math.min(k,1.0)})`;el.style.opacity=clamp(u*3)*(1-ko);return true;
@@ -252,13 +220,13 @@ function renderBrief(t){
     sk.style.opacity=1-rk;sk.querySelector('i').style.left=(-40+((t*0.9+i*0.3)%1)*140)+'%';
     p1.style.opacity=rk;p1.style.filter=rk<1?`blur(${(1-rk)*8}px)`:'none';p1.style.display='inline-block';p1.style.transform=`translateX(${(1-rk)*26}px)`;
     if(p2){const r2=eo(p(t,r.rev2-0.04,0.26));p2.style.opacity=r2;p2.style.display='inline-block';p2.style.filter=r2<1?`blur(${(1-r2)*8}px)`:'none';p2.style.transform=`translateX(${(1-r2)*26}px)`}
-    d.querySelector('.bn').style.color=rk>0.5?'var(--ember)':'';
+    d.querySelector('.bn').style.color=rk>0.5?'var(--terra)':'';
     const tk=p(t,r.tick,0.24),f=d.querySelector('.cb .f'),sv=d.querySelector('.cb svg path');
     f.style.transform=`scale(${back(tk)})`;f.style.opacity=tk>0?1:0;
     const L=34;sv.style.strokeDasharray=L;sv.style.strokeDashoffset=L*(1-eo(p(t,r.tick+0.06,0.18)));sv.style.opacity=tk>0?1:0;
     if(t>=r.tick)done++;
   });
-  $('bCount').textContent=done+'/3';$('bCount').style.color=done===3?'var(--ember)':'';
+  $('bCount').textContent=done+'/3';$('bCount').style.color=done===3?'var(--terra)':'';
 }
 
 // ---------------- save pill ----------------
@@ -266,7 +234,7 @@ const SV={in:24.24,fill:24.49,out:25.26};
 function renderSave(t){
   if(!glassIn($('save'),t,SV.in,SV.out,40))return;
   const fk=p(t,SV.fill,0.2),bm=$('bm'),path=$('bmp');
-  path.setAttribute('fill',fk>0?'#FF5B24':'none');path.setAttribute('stroke',fk>0?'#FF5B24':'#111113');
+  path.setAttribute('fill',fk>0?'#E0784F':'none');path.setAttribute('stroke',fk>0?'#E0784F':'#4A3A31');
   bm.style.transform=`scale(${1+0.22*Math.sin(Math.PI*fk)})`;
   const sl=$('sl');sl._s=sl._s||'FOR LATER';type(sl,t,24.64,30);
 }
@@ -275,16 +243,15 @@ function renderSave(t){
 const DP={in:12.10,out:13.46};
 function renderDepth(t){
   const d=$('depth'),vis=t>=DP.in&&t<DP.out+0.12;d.style.display=vis?'block':'none';if(!vis)return;
-  const w=$('dW');if(!w._fid)mblur(w);drag(w,t,DP.in,-1,420);
+  const w=$('dW');if(!w._fid){mblur(w);w._noShadow=0}drag(w,t,DP.in,-1,420);
   d.style.opacity=1-eo(p(t,DP.out,0.12));
 }
 
-// camera shake on hero landings (same offsets applied to the plate in comp.py)
 window.setup=()=>{buildCaps();buildBrief();};
 window.render=(t,mode='front',shake=[0,0])=>{
   document.body.className=mode;
   $('root').style.transform=`translate(${shake[0]}px,${shake[1]}px)`;
-  renderVF(t);renderCaps(t);renderIG(t);renderBrief(t);renderSave(t);renderDepth(t);
+  renderCaps(t);renderIG(t);renderBrief(t);renderSave(t);renderDepth(t);
 };
 </script>
 </body></html>

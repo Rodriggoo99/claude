@@ -6,11 +6,12 @@ Fonte: `UGC Video 1 Pré Claude.mp4` (Drive › Videos Claude Edits › Videos U
 ```
 python3 edl.py                                   # shake.json (partilhado com o overlay)
 node render/render.js <ov>/front front 1 frames 0 1541 3     # 1080 (scale 2 = 4K)
-node render/render.js <ov>/mask  mask  1 frames 913 1352 2   # vidro fosco (checklist)
+node render/render.js <ov>/mask  mask  1 frames 913 1352 2   # vidro fosco (brief)
 node render/render.js <ov>/mask  mask  1 frames 1452 1532 2  # vidro fosco (save)
 node render/render.js <ov>/depth depth 1 frames 725 818 2    # QUALITY atrás da cabeça
 python3 matte.py dump <plates> && python3 matte.py infer <plates> <ov>/matte
-python3 sfx.py                                   # final_mix.wav, voice.wav, sfx_only.wav (-14 LUFS)
+python3 audio_match.py <src> voice_matched.wav    # igualar tom + volume take a take (-14 LUFS)
+python3 sfx.py voice_matched.wav                 # final_mix.wav, voice.wav, sfx_only.wav
 python3 comp.py run 1 <ov> <out>/                # pré-visualização 1080p
 python3 comp.py run 2 <ov4k> <out>/              # final 4K: plate 10-bit + final 10-bit + H.264
 ```
