@@ -1,6 +1,6 @@
 ---
 name: rodrigo-video-edit
-description: Base de edição aprovada para os vídeos de marca pessoal do Rodrigo (Viral Wave Agency) — corte, escolha de takes, legendas premium, motion graphics, som e entrega para o CapCut. Usar SEMPRE que o Rodrigo pedir para editar, cortar, legendar ou pôr motion graphics num vídeo seu (talking head, reels, TikTok, UGC de marca pessoal em português).
+description: Base de edição aprovada para os vídeos de marca pessoal do Rodrigo marca pessoal PT — corte, escolha de takes, legendas premium, motion graphics, som e entrega do vídeo completo. Usar SEMPRE que o Rodrigo pedir para editar, cortar, legendar ou pôr motion graphics num vídeo seu (talking head, reels, TikTok, UGC de marca pessoal em português).
 ---
 
 # Guia de estilo — vídeos do Rodrigo (Viral Wave Agency)
@@ -18,7 +18,7 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 
 ## Imagem
 - **Não mexer na cor** — faço eu a cor. Trabalhar sempre em 10-bit quando o original é 10-bit (DJI).
-- Entregar: versão final completa + **plate sem texto (10-bit)** + **camada de texto com transparência em ProRes 4444** (funciona no CapCut) + áudio (mix e stems).
+- Entregar **só o vídeo completo** (voz + legendas + gráficos + efeitos), sem ficheiros separados (nada de plate, camada de texto ou stems).
 - Tudo dentro das **margens seguras** do Reels/TikTok (1080×1920: 250 px em cima, 480 px em baixo, 120 px à direita, 60 px à esquerda). Verificar frame a frame.
 - Zooms: poucos, suaves, **sempre centrados na cara**.
 
@@ -44,19 +44,19 @@ Regras para qualquer edição dos meus vídeos. Objetivo: **premium, estético e
 Escolher por momento, no máximo 2–3 recursos diferentes por vídeo:
 | Situação | Recurso |
 |---|---|
-| Hook / clímax | Palavra gigante atrás de mim (profundidade) + impacto sonoro |
+| Hook / clímax | Palavra gigante atrás de mim (profundidade) (**não usar sempre isto no hook → variar**) + impacto sonoro |
 | Lista, passos, "antes vs depois", números | **Ecrã editorial**: papel quadriculado creme, tiras de papel rasgado com texto serifado, marcador âmbar e gráficos desenhados à mão |
 | Citação / frase marcante | **Citação cinematográfica**: fundo desfocado e escurecido, texto serifado grande, riscos/círculos desenhados à mão |
 | Mostrar exemplos de conteúdo/produtos | Ecrã claro (off-white) com mockups de telemóvel e sombra suave |
-| Repetição/ênfase ("mais vezes não") | Palavras espalhadas na cena, várias escalas e opacidades |
+| Repetição/ênfase ("mais vezes não") | Palavras espalhadas na cena (**esporádico**), várias escalas e opacidades |
 | CTA "guarda/comenta" | Ícone nativo do Instagram animado (guardar, comentário) |
 - **Evitar:** o mesmo ecrã azul-escuro com tabelas/cartões em todos os vídeos.
 
 ## Som
-- Voz a **-14 LUFS**. Efeitos discretos por baixo da voz (whooshes nas transições, papel a deslizar, marcador a riscar, impacto nas palavras-herói). Sem música sem licença.
+- Voz a **-14 LUFS**. Efeitos discretos por baixo da voz (whooshes nas transições, papel a deslizar, marcador a riscar, impacto nas palavras-herói). **Sem música no ficheiro** — o Rodrigo mete a música na app (Instagram/TikTok); sugerir uma que faça sentido e a que volume (voz sempre bem audível).
 
 ## Fluxo de trabalho
 1. Transcrever (Whisper large-v3, pt) com tempos por palavra; verificar zonas com som que a transcrição saltou.
 2. Agrupar takes por frase; escolher o melhor (entoação medida + frames da cara); corte apertado; sem mexer na velocidade; confirmar com nova transcrição.
 3. Mandar **pré-visualização 1080p** para aprovação.
-4. Final 4K: plate 10-bit + texto ProRes 4444 alpha + áudio separado + versão completa. Verificar margens seguras frame a frame.
+4. Final 4K: só o vídeo completo (sem música). Verificar margens seguras frame a frame.
