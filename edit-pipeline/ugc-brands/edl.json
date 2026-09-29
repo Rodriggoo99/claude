@@ -1,0 +1,75 @@
+{
+ "source": "UGC Video 1 Pré Claude.mp4 (Drive 'Videos UGC'): 2160x3840 60fps H.264 8-bit, 25.70 s, already cut by Rodrigo (8 jump cuts, no pauses left)",
+ "fps": 60,
+ "speed": 1.0,
+ "src_frames": 1542,
+ "out_frames": 1542,
+ "face": [
+  0.532,
+  0.462
+ ],
+ "zooms": [
+  {
+   "id": "hook push",
+   "t0": 0.0,
+   "t1": 3.52,
+   "z0": 1.0,
+   "z1": 1.04,
+   "ease": "inout"
+  },
+  {
+   "id": "'this' AF punch",
+   "t0": 3.52,
+   "t1": 4.2,
+   "z0": 1.09,
+   "z1": 1.09,
+   "ramp": 0.11
+  },
+  {
+   "id": "quality push",
+   "t0": 12.1,
+   "t1": 13.53,
+   "z0": 1.0,
+   "z1": 1.05,
+   "ease": "inout"
+  },
+  {
+   "id": "'don't care'",
+   "t0": 22.66,
+   "t1": 23.21,
+   "z0": 1.08,
+   "z1": 1.08,
+   "ramp": 0.088
+  }
+ ],
+ "shakes": [
+  [
+   3.82,
+   7
+  ],
+  [
+   12.4,
+   8
+  ],
+  [
+   22.95,
+   6
+  ]
+ ],
+ "glass_windows": [
+  [
+   15.25,
+   22.51
+  ],
+  [
+   24.22,
+   25.52
+  ]
+ ],
+ "depth_window": [
+  12.1,
+  13.62
+ ],
+ "speed_note": "Rodrigo already exported this cut at 1.1x -> no further speed change (video and audio at 1.0)",
+ "end_note": "source already ends as the hand reaches the lens (25.68 s) -> keep to the last frame"
+}
